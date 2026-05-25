@@ -1,0 +1,11 @@
+com\notesapp\tests\ui\CategoryFilterTest.class
+com\notesapp\tests\e2e\UiApiSyncTest.class
+com\notesapp\tests\ui\LoginTest.class
+com\notesapp\tests\api\AuthApiTest.class
+com\notesapp\tests\e2e\DeleteSyncTest.class
+com\notesapp\tests\ui\NotesCrudTest.class
+com\notesapp\stepdefs\NotesSteps.class
+com\notesapp\stepdefs\ApiSteps.class
+com\notesapp\stepdefs\LoginSteps.class
+com\notesapp\tests\api\NegativeApiTest.class
+com\notesapp\tests\api\NotesApiTest.class

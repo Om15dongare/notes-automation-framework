@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>TestNG:  UI Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>UI Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon May 25 16:44:07 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>277 seconds (277048 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.notesapp.tests.ui.LoginTest.testValidLogin()'><b>testValidLogin</b><br>Test class: com.notesapp.tests.ui.LoginTest<br>Test method: TC-UI-01: Login with valid credentials</td>
+<td></td>
+<td>2</td>
+<td>com.notesapp.tests.ui.LoginTest@2282400e</td></tr>
+<tr>
+<td title='com.notesapp.tests.ui.CategoryFilterTest.testCategoryFilter()'><b>testCategoryFilter</b><br>Test class: com.notesapp.tests.ui.CategoryFilterTest<br>Test method: TC-UI-05: Filter notes by category — only matching notes shown</td>
+<td></td>
+<td>8</td>
+<td>com.notesapp.tests.ui.CategoryFilterTest@2f79f192</td></tr>
+<tr>
+<td title='com.notesapp.tests.ui.LoginTest.testLoginWrongPassword()'><b>testLoginWrongPassword</b><br>Test class: com.notesapp.tests.ui.LoginTest<br>Test method: TC-NEG-01: Login with wrong password shows error</td>
+<td></td>
+<td>11</td>
+<td>com.notesapp.tests.ui.LoginTest@2282400e</td></tr>
+<tr>
+<td title='com.notesapp.tests.ui.LoginTest.testLoginEmptyEmail()'><b>testLoginEmptyEmail</b><br>Test class: com.notesapp.tests.ui.LoginTest<br>Test method: TC-NEG-04: Login with blank email shows validation error</td>
+<td></td>
+<td>11</td>
+<td>com.notesapp.tests.ui.LoginTest@2282400e</td></tr>
+<tr>
+<td title='com.notesapp.tests.ui.NotesCrudTest.testCreateNote()'><b>testCreateNote</b><br>Test class: com.notesapp.tests.ui.NotesCrudTest<br>Test method: TC-UI-02: Create note via UI and verify in list</td>
+<td></td>
+<td>17</td>
+<td>com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1</td></tr>
+<tr>
+<td title='com.notesapp.tests.ui.NotesCrudTest.testCreateNoteBlankTitle()'><b>testCreateNoteBlankTitle</b><br>Test class: com.notesapp.tests.ui.NotesCrudTest<br>Test method: TC-NEG-03: Create note with blank title shows validation error</td>
+<td></td>
+<td>28</td>
+<td>com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1</td></tr>
+<tr>
+<td title='com.notesapp.tests.ui.NotesCrudTest.testEditNote()'><b>testEditNote</b><br>Test class: com.notesapp.tests.ui.NotesCrudTest<br>Test method: TC-UI-04: Edit existing note and verify updated title</td>
+<td></td>
+<td>101</td>
+<td>com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1</td></tr>
+</table><p>
+</body>
+</html>

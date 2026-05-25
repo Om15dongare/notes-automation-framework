@@ -1,0 +1,185 @@
+2026-05-25 16:44:05.421 [main] INFO  org.testng.internal.Utils - [XmlSuite] [WARN] 'parallel' value 'false' is no longer valid, defaulting to 'none'.
+2026-05-25 16:44:06.444 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2026-05-25 16:44:06.445 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2026-05-25 16:44:06.446 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2026-05-25 16:44:07.215 [main] INFO  com.notesapp.tests.ui.LoginTest - ====== Setting up driver: browser=chrome, headless=false ======
+2026-05-25 16:44:11.635 [main] INFO  com.notesapp.pages.LoginPage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-25 16:44:14.548 [main] INFO  com.notesapp.pages.LoginPage - Opened login page
+2026-05-25 16:44:14.761 [main] DEBUG com.notesapp.pages.LoginPage - Typing '' into: By.id: email
+2026-05-25 16:44:15.209 [main] DEBUG com.notesapp.pages.LoginPage - Typing '123456' into: By.id: password
+2026-05-25 16:44:15.497 [main] DEBUG com.notesapp.pages.LoginPage - Clicking: By.cssSelector: button.btn-primary
+2026-05-25 16:44:25.824 [main] WARN  com.notesapp.pages.LoginPage - Error alert did not appear within 8s after failed login
+2026-05-25 16:44:26.002 [main] INFO  com.notesapp.utils.AllureUtils - Screenshot attached to Allure: Login Failure — Blank Email
+2026-05-25 16:44:26.030 [main] INFO  com.notesapp.tests.ui.LoginTest - TC-NEG-04 PASSED — Blank email correctly rejected (user stayed on /login)
+2026-05-25 16:44:26.098 [main] INFO  com.notesapp.tests.ui.LoginTest - TEST PASSED: testLoginEmptyEmail
+2026-05-25 16:44:26.588 [main] INFO  com.notesapp.tests.ui.LoginTest - ====== Driver quit — thread cleaned up ======
+2026-05-25 16:44:26.596 [main] INFO  com.notesapp.tests.ui.LoginTest - ====== Setting up driver: browser=chrome, headless=false ======
+2026-05-25 16:44:28.025 [main] INFO  com.notesapp.pages.LoginPage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-25 16:44:30.534 [main] INFO  com.notesapp.pages.LoginPage - Opened login page
+2026-05-25 16:44:30.552 [main] DEBUG com.notesapp.pages.LoginPage - Typing 'omgdongare@gmail.com' into: By.id: email
+2026-05-25 16:44:31.122 [main] DEBUG com.notesapp.pages.LoginPage - Typing 'wrongpass123' into: By.id: password
+2026-05-25 16:44:31.507 [main] DEBUG com.notesapp.pages.LoginPage - Clicking: By.cssSelector: button.btn-primary
+2026-05-25 16:44:41.857 [main] WARN  com.notesapp.pages.LoginPage - Error alert did not appear within 8s after failed login
+2026-05-25 16:44:42.032 [main] INFO  com.notesapp.utils.AllureUtils - Screenshot attached to Allure: Login Failure — Wrong Password
+2026-05-25 16:44:42.049 [main] INFO  com.notesapp.tests.ui.LoginTest - TC-NEG-01 PASSED — Wrong password correctly rejected (user stayed on /login)
+2026-05-25 16:44:42.053 [main] INFO  com.notesapp.tests.ui.LoginTest - TEST PASSED: testLoginWrongPassword
+2026-05-25 16:44:42.507 [main] INFO  com.notesapp.tests.ui.LoginTest - ====== Driver quit — thread cleaned up ======
+2026-05-25 16:44:42.514 [main] INFO  com.notesapp.tests.ui.LoginTest - ====== Setting up driver: browser=chrome, headless=false ======
+2026-05-25 16:44:43.955 [main] INFO  com.notesapp.pages.LoginPage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-25 16:44:46.712 [main] INFO  com.notesapp.pages.LoginPage - Opened login page
+2026-05-25 16:44:46.726 [main] DEBUG com.notesapp.pages.LoginPage - Typing 'omgdongare@gmail.com' into: By.id: email
+2026-05-25 16:44:47.380 [main] DEBUG com.notesapp.pages.LoginPage - Typing '123456' into: By.id: password
+2026-05-25 16:44:47.612 [main] DEBUG com.notesapp.pages.LoginPage - Clicking: By.cssSelector: button.btn-primary
+2026-05-25 16:44:48.999 [main] INFO  com.notesapp.tests.ui.LoginTest - TC-UI-01 PASSED — Valid login successful
+2026-05-25 16:44:49.006 [main] INFO  com.notesapp.tests.ui.LoginTest - TEST PASSED: testValidLogin
+2026-05-25 16:44:49.382 [main] INFO  com.notesapp.tests.ui.LoginTest - ====== Driver quit — thread cleaned up ======
+2026-05-25 16:44:49.388 [main] INFO  com.notesapp.tests.ui.NotesCrudTest - ====== Setting up driver: browser=chrome, headless=false ======
+2026-05-25 16:44:50.616 [main] INFO  com.notesapp.pages.LoginPage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-25 16:44:53.896 [main] INFO  com.notesapp.pages.LoginPage - Opened login page
+2026-05-25 16:44:53.897 [main] DEBUG com.notesapp.pages.LoginPage - Typing 'omgdongare@gmail.com' into: By.id: email
+2026-05-25 16:44:54.433 [main] DEBUG com.notesapp.pages.LoginPage - Typing '123456' into: By.id: password
+2026-05-25 16:44:54.666 [main] DEBUG com.notesapp.pages.LoginPage - Clicking: By.cssSelector: button.btn-primary
+2026-05-25 16:44:55.962 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[contains(., 'Add Note')]
+2026-05-25 16:44:56.385 [main] DEBUG com.notesapp.pages.NotesPage - Typing 'Grocery List 1779707695960' into: By.id: title
+2026-05-25 16:44:56.749 [main] DEBUG com.notesapp.pages.NotesPage - Typing 'Buy milk, eggs, and bread' into: By.id: description
+2026-05-25 16:44:57.253 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[normalize-space(text())='Create']
+2026-05-25 16:45:13.135 [main] INFO  com.notesapp.pages.NotesPage - Created note: 'Grocery List 1779707695960' in category 'Home'
+2026-05-25 16:45:13.217 [main] INFO  com.notesapp.tests.ui.NotesCrudTest - TC-UI-02 PASSED — Note created: Grocery List 1779707695960
+2026-05-25 16:45:13.223 [main] INFO  com.notesapp.tests.ui.NotesCrudTest - TEST PASSED: testCreateNote
+2026-05-25 16:45:13.813 [main] INFO  com.notesapp.tests.ui.NotesCrudTest - ====== Driver quit — thread cleaned up ======
+2026-05-25 16:45:13.819 [main] INFO  com.notesapp.tests.ui.NotesCrudTest - ====== Setting up driver: browser=chrome, headless=false ======
+2026-05-25 16:45:15.073 [main] INFO  com.notesapp.pages.LoginPage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-25 16:45:18.181 [main] INFO  com.notesapp.pages.LoginPage - Opened login page
+2026-05-25 16:45:18.182 [main] DEBUG com.notesapp.pages.LoginPage - Typing 'omgdongare@gmail.com' into: By.id: email
+2026-05-25 16:45:18.725 [main] DEBUG com.notesapp.pages.LoginPage - Typing '123456' into: By.id: password
+2026-05-25 16:45:18.982 [main] DEBUG com.notesapp.pages.LoginPage - Clicking: By.cssSelector: button.btn-primary
+2026-05-25 16:45:20.344 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[contains(., 'Add Note')]
+2026-05-25 16:45:20.739 [main] DEBUG com.notesapp.pages.NotesPage - Typing '' into: By.id: title
+2026-05-25 16:45:20.963 [main] DEBUG com.notesapp.pages.NotesPage - Typing 'This should not be saved' into: By.id: description
+2026-05-25 16:45:21.328 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[normalize-space(text())='Create']
+2026-05-25 16:45:47.770 [main] INFO  com.notesapp.utils.AllureUtils - Screenshot attached to Allure: Create Note Failure — Blank Title
+2026-05-25 16:45:49.062 [main] INFO  com.notesapp.tests.ui.NotesCrudTest - TC-NEG-03 PASSED — Blank title note was not saved
+2026-05-25 16:45:49.090 [main] INFO  com.notesapp.tests.ui.NotesCrudTest - TEST PASSED: testCreateNoteBlankTitle
+2026-05-25 16:45:49.728 [main] INFO  com.notesapp.tests.ui.NotesCrudTest - ====== Driver quit — thread cleaned up ======
+2026-05-25 16:45:49.732 [main] INFO  com.notesapp.tests.ui.NotesCrudTest - ====== Setting up driver: browser=chrome, headless=false ======
+2026-05-25 16:45:51.033 [main] INFO  com.notesapp.pages.LoginPage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-25 16:45:54.071 [main] INFO  com.notesapp.pages.LoginPage - Opened login page
+2026-05-25 16:45:54.073 [main] DEBUG com.notesapp.pages.LoginPage - Typing 'omgdongare@gmail.com' into: By.id: email
+2026-05-25 16:45:54.613 [main] DEBUG com.notesapp.pages.LoginPage - Typing '123456' into: By.id: password
+2026-05-25 16:45:54.965 [main] DEBUG com.notesapp.pages.LoginPage - Clicking: By.cssSelector: button.btn-primary
+2026-05-25 16:45:56.226 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[contains(., 'Add Note')]
+2026-05-25 16:45:56.585 [main] DEBUG com.notesapp.pages.NotesPage - Typing 'Edit Target 1779707756225' into: By.id: title
+2026-05-25 16:45:56.954 [main] DEBUG com.notesapp.pages.NotesPage - Typing 'Will be edited' into: By.id: description
+2026-05-25 16:45:57.497 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[normalize-space(text())='Create']
+2026-05-25 16:46:32.676 [main] INFO  com.notesapp.pages.NotesPage - Created note: 'Edit Target 1779707756225' in category 'Work'
+2026-05-25 16:46:32.808 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //div[contains(@class,'card')][.//div[contains(@class,'card-header') and contains(normalize-space(.),'Edit Target 1779707756225')]]//*[self::a or self::button][contains(normalize-space(text()),'Edit')]
+2026-05-25 16:46:34.058 [main] WARN  com.notesapp.pages.NotesPage - Standard click intercepted — retrying with JS: By.xpath: //div[contains(@class,'card')][.//div[contains(@class,'card-header') and contains(normalize-space(.),'Edit Target 1779707756225')]]//*[self::a or self::button][contains(normalize-space(text()),'Edit')]
+2026-05-25 16:46:35.031 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[normalize-space(text())='Save']
+2026-05-25 16:47:36.724 [main] INFO  com.notesapp.pages.NotesPage - Dashboard ready — 'Add Note' button visible
+2026-05-25 16:47:36.726 [main] INFO  com.notesapp.pages.NotesPage - Edited note 'Edit Target 1779707756225' → 'Updated Edit Target 1779707756225'
+2026-05-25 16:47:37.835 [main] INFO  com.notesapp.tests.ui.NotesCrudTest - TC-UI-04 PASSED — Note renamed from 'Edit Target 1779707756225' to 'Updated Edit Target 1779707756225'
+2026-05-25 16:47:37.844 [main] INFO  com.notesapp.tests.ui.NotesCrudTest - TEST PASSED: testEditNote
+2026-05-25 16:47:38.420 [main] INFO  com.notesapp.tests.ui.NotesCrudTest - ====== Driver quit — thread cleaned up ======
+2026-05-25 16:47:38.425 [main] INFO  com.notesapp.tests.ui.CategoryFilterTest - ====== Setting up driver: browser=chrome, headless=true ======
+2026-05-25 16:47:39.528 [main] INFO  com.notesapp.pages.LoginPage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-25 16:47:42.699 [main] INFO  com.notesapp.pages.LoginPage - Opened login page
+2026-05-25 16:47:42.700 [main] DEBUG com.notesapp.pages.LoginPage - Typing 'omgdongare@gmail.com' into: By.id: email
+2026-05-25 16:47:43.034 [main] DEBUG com.notesapp.pages.LoginPage - Typing '123456' into: By.id: password
+2026-05-25 16:47:43.368 [main] DEBUG com.notesapp.pages.LoginPage - Clicking: By.cssSelector: button.btn-primary
+2026-05-25 16:47:44.502 [main] WARN  com.notesapp.pages.LoginPage - Standard click intercepted — retrying with JS: By.cssSelector: button.btn-primary
+2026-05-25 16:47:45.617 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[contains(., 'Add Note')]
+2026-05-25 16:47:46.784 [main] WARN  com.notesapp.pages.NotesPage - Standard click intercepted — retrying with JS: By.xpath: //button[contains(., 'Add Note')]
+2026-05-25 16:47:47.069 [main] DEBUG com.notesapp.pages.NotesPage - Typing 'Home Note 1779707646844' into: By.id: title
+2026-05-25 16:47:47.366 [main] DEBUG com.notesapp.pages.NotesPage - Typing 'Home category note' into: By.id: description
+2026-05-25 16:47:47.782 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[normalize-space(text())='Create']
+2026-05-25 16:48:00.762 [main] INFO  com.notesapp.pages.NotesPage - Created note: 'Home Note 1779707646844' in category 'Home'
+2026-05-25 16:48:03.265 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[contains(., 'Add Note')]
+2026-05-25 16:48:03.640 [main] DEBUG com.notesapp.pages.NotesPage - Typing 'Work Note 1779707646844' into: By.id: title
+2026-05-25 16:48:03.925 [main] DEBUG com.notesapp.pages.NotesPage - Typing 'Work category note' into: By.id: description
+2026-05-25 16:48:04.402 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[normalize-space(text())='Create']
+2026-05-25 16:48:17.232 [main] INFO  com.notesapp.pages.NotesPage - Created note: 'Work Note 1779707646844' in category 'Work'
+2026-05-25 16:48:19.734 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[contains(., 'Add Note')]
+2026-05-25 16:48:20.857 [main] WARN  com.notesapp.pages.NotesPage - Standard click intercepted — retrying with JS: By.xpath: //button[contains(., 'Add Note')]
+2026-05-25 16:48:21.086 [main] DEBUG com.notesapp.pages.NotesPage - Typing 'Personal Note 1779707646844' into: By.id: title
+2026-05-25 16:48:21.360 [main] DEBUG com.notesapp.pages.NotesPage - Typing 'Personal category note' into: By.id: description
+2026-05-25 16:48:21.814 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[normalize-space(text())='Create']
+2026-05-25 16:48:34.491 [main] INFO  com.notesapp.pages.NotesPage - Created note: 'Personal Note 1779707646844' in category 'Personal'
+2026-05-25 16:48:38.510 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[contains(., 'Work')]
+2026-05-25 16:48:39.372 [main] INFO  com.notesapp.pages.NotesPage - Applied category filter: Work
+2026-05-25 16:48:41.371 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[contains(., 'Home')]
+2026-05-25 16:48:42.135 [main] INFO  com.notesapp.pages.NotesPage - Applied category filter: Home
+2026-05-25 16:48:43.672 [main] INFO  com.notesapp.tests.ui.CategoryFilterTest - TC-UI-05 PASSED — Category filter working correctly
+2026-05-25 16:48:43.677 [main] INFO  com.notesapp.tests.ui.CategoryFilterTest - TEST PASSED: testCategoryFilter
+2026-05-25 16:48:44.044 [main] INFO  com.notesapp.tests.ui.CategoryFilterTest - ====== Driver quit — thread cleaned up ======
+2026-05-25 16:48:44.143 [main] INFO  com.notesapp.api.AuthApi - API Login: omgdongare@gmail.com
+2026-05-25 16:48:53.029 [main] INFO  com.notesapp.api.AuthApi - Token obtained: 28c2d533...0589
+2026-05-25 16:48:53.824 [main] INFO  com.notesapp.api.AuthApi - API Login: omgdongare@gmail.com
+2026-05-25 16:48:54.421 [main] INFO  com.notesapp.api.AuthApi - API Login: nobody@unknown.com
+2026-05-25 16:48:54.815 [main] INFO  com.notesapp.api.AuthApi - API Login: omgdongare@gmail.com
+2026-05-25 16:48:55.589 [main] INFO  com.notesapp.api.AuthApi - API Login: omgdongare@gmail.com
+2026-05-25 16:48:56.177 [main] INFO  com.notesapp.api.AuthApi - Token obtained: 28c2d533...0589
+2026-05-25 16:48:56.224 [main] INFO  com.notesapp.api.NotesApi - Creating note: 'API Test Note 1779707936184' in category 'Work'
+2026-05-25 16:48:57.569 [main] INFO  com.notesapp.api.NotesApi - Creating note: 'Delete Target 1779707937568' in category 'Personal'
+2026-05-25 16:48:59.219 [main] INFO  com.notesapp.api.NotesApi - Created note id: 6a143023038935029664e814
+2026-05-25 16:48:59.220 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter id
+2026-05-25 16:48:59.220 [main] INFO  com.notesapp.api.NotesApi - Deleting note id: 6a143023038935029664e814
+2026-05-25 16:48:59.608 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter id
+2026-05-25 16:48:59.981 [main] INFO  com.notesapp.api.NotesApi - Fetching all notes via API
+2026-05-25 16:49:00.946 [main] INFO  com.notesapp.api.NotesApi - Creating note: 'Before Update 1779707940945' in category 'Home'
+2026-05-25 16:49:01.331 [main] INFO  com.notesapp.api.NotesApi - Created note id: 6a143025038935029664e81f
+2026-05-25 16:49:01.333 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter id
+2026-05-25 16:49:01.334 [main] INFO  com.notesapp.api.NotesApi - Updating (PUT) note id: 6a143025038935029664e81f
+2026-05-25 16:49:01.803 [main] INFO  com.notesapp.api.NotesApi - Creating note: 'Should fail' in category 'Home'
+2026-05-25 16:49:02.159 [main] INFO  com.notesapp.api.AuthApi - API Login: omgdongare@gmail.com
+2026-05-25 16:49:02.882 [main] INFO  com.notesapp.api.AuthApi - Token obtained: 28c2d533...0589
+2026-05-25 16:49:02.882 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter id
+2026-05-25 16:49:02.883 [main] INFO  com.notesapp.api.NotesApi - Deleting note id: 000000000000000000000000
+2026-05-25 16:49:03.672 [main] INFO  com.notesapp.tests.e2e.UiApiSyncTest - ====== Setting up driver: browser=chrome, headless=false ======
+2026-05-25 16:49:05.082 [main] INFO  com.notesapp.pages.LoginPage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-25 16:49:08.637 [main] INFO  com.notesapp.pages.LoginPage - Opened login page
+2026-05-25 16:49:08.638 [main] DEBUG com.notesapp.pages.LoginPage - Typing 'omgdongare@gmail.com' into: By.id: email
+2026-05-25 16:49:09.145 [main] DEBUG com.notesapp.pages.LoginPage - Typing '123456' into: By.id: password
+2026-05-25 16:49:09.456 [main] DEBUG com.notesapp.pages.LoginPage - Clicking: By.cssSelector: button.btn-primary
+2026-05-25 16:49:10.761 [main] INFO  com.notesapp.api.AuthApi - API Login: omgdongare@gmail.com
+2026-05-25 16:49:11.513 [main] INFO  com.notesapp.api.AuthApi - Token obtained: 28c2d533...0589
+2026-05-25 16:49:11.528 [main] INFO  com.notesapp.api.NotesApi - Fetching all notes via API
+2026-05-25 16:49:12.002 [main] INFO  com.notesapp.tests.e2e.UiApiSyncTest - GET /notes response time: 388ms
+2026-05-25 16:49:12.012 [main] INFO  com.notesapp.tests.e2e.UiApiSyncTest - TEST PASSED: testApiResponseTimeUnder2Seconds
+2026-05-25 16:49:12.412 [main] INFO  com.notesapp.tests.e2e.UiApiSyncTest - ====== Driver quit — thread cleaned up ======
+2026-05-25 16:49:12.417 [main] INFO  com.notesapp.tests.e2e.UiApiSyncTest - ====== Setting up driver: browser=chrome, headless=false ======
+2026-05-25 16:49:13.887 [main] INFO  com.notesapp.pages.LoginPage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-25 16:49:17.637 [main] INFO  com.notesapp.pages.LoginPage - Opened login page
+2026-05-25 16:49:17.637 [main] DEBUG com.notesapp.pages.LoginPage - Typing 'omgdongare@gmail.com' into: By.id: email
+2026-05-25 16:49:18.136 [main] DEBUG com.notesapp.pages.LoginPage - Typing '123456' into: By.id: password
+2026-05-25 16:49:18.424 [main] DEBUG com.notesapp.pages.LoginPage - Clicking: By.cssSelector: button.btn-primary
+2026-05-25 16:49:19.704 [main] INFO  com.notesapp.api.AuthApi - API Login: omgdongare@gmail.com
+2026-05-25 16:49:20.423 [main] INFO  com.notesapp.api.AuthApi - Token obtained: 28c2d533...0589
+2026-05-25 16:49:20.437 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[contains(., 'Add Note')]
+2026-05-25 16:49:20.859 [main] DEBUG com.notesapp.pages.NotesPage - Typing 'Sprint Planning 1779707960437' into: By.id: title
+2026-05-25 16:49:21.232 [main] DEBUG com.notesapp.pages.NotesPage - Typing 'Define Q3 OKRs and deliverables' into: By.id: description
+2026-05-25 16:49:21.899 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[normalize-space(text())='Create']
+2026-05-25 16:49:39.541 [main] INFO  com.notesapp.pages.NotesPage - Created note: 'Sprint Planning 1779707960437' in category 'Work'
+2026-05-25 16:49:39.623 [main] INFO  com.notesapp.api.NotesApi - Fetching all notes via API
+2026-05-25 16:49:41.297 [main] INFO  com.notesapp.tests.e2e.UiApiSyncTest - TC-E2E-01 PASSED — All fields matched between UI and API for note: 'Sprint Planning 1779707960437'
+2026-05-25 16:49:41.304 [main] INFO  com.notesapp.tests.e2e.UiApiSyncTest - TEST PASSED: testUiNoteAppearsInApi
+2026-05-25 16:49:41.875 [main] INFO  com.notesapp.tests.e2e.UiApiSyncTest - ====== Driver quit — thread cleaned up ======
+2026-05-25 16:49:41.882 [main] INFO  com.notesapp.tests.e2e.DeleteSyncTest - ====== Setting up driver: browser=chrome, headless=false ======
+2026-05-25 16:49:43.274 [main] INFO  com.notesapp.pages.LoginPage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-25 16:49:46.422 [main] INFO  com.notesapp.pages.LoginPage - Opened login page
+2026-05-25 16:49:46.423 [main] DEBUG com.notesapp.pages.LoginPage - Typing 'omgdongare@gmail.com' into: By.id: email
+2026-05-25 16:49:46.947 [main] DEBUG com.notesapp.pages.LoginPage - Typing '123456' into: By.id: password
+2026-05-25 16:49:47.248 [main] DEBUG com.notesapp.pages.LoginPage - Clicking: By.cssSelector: button.btn-primary
+2026-05-25 16:49:48.521 [main] INFO  com.notesapp.api.AuthApi - API Login: omgdongare@gmail.com
+2026-05-25 16:49:49.024 [main] INFO  com.notesapp.api.AuthApi - Token obtained: 28c2d533...0589
+2026-05-25 16:49:49.037 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[contains(., 'Add Note')]
+2026-05-25 16:49:49.429 [main] DEBUG com.notesapp.pages.NotesPage - Typing 'Delete Sync Test 1779707989035' into: By.id: title
+2026-05-25 16:49:49.808 [main] DEBUG com.notesapp.pages.NotesPage - Typing 'This will be deleted via API' into: By.id: description
+2026-05-25 16:49:50.370 [main] DEBUG com.notesapp.pages.NotesPage - Clicking: By.xpath: //button[normalize-space(text())='Create']
+2026-05-25 16:50:07.816 [main] INFO  com.notesapp.pages.NotesPage - Created note: 'Delete Sync Test 1779707989035' in category 'Personal'
+2026-05-25 16:50:07.895 [main] INFO  com.notesapp.api.NotesApi - Fetching all notes via API
+2026-05-25 16:50:08.669 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter id
+2026-05-25 16:50:08.669 [main] INFO  com.notesapp.api.NotesApi - Deleting note id: 6a143056038935029664e867
+2026-05-25 16:50:54.585 [main] INFO  com.notesapp.pages.NotesPage - Dashboard ready — 'Add Note' button visible
+2026-05-25 16:51:04.670 [main] INFO  com.notesapp.tests.e2e.DeleteSyncTest - TC-E2E-02 PASSED — API deletion reflected in UI for: 'Delete Sync Test 1779707989035'
+2026-05-25 16:51:04.676 [main] INFO  com.notesapp.tests.e2e.DeleteSyncTest - TEST PASSED: testApiDeleteReflectedInUI
+2026-05-25 16:51:05.419 [main] INFO  com.notesapp.tests.e2e.DeleteSyncTest - ====== Driver quit — thread cleaned up ======

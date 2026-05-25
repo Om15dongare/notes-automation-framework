@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Notes App — Full Suite" parallel="none" verbose="1">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="UI Tests">
+        <classes>
+            <class name="com.notesapp.tests.ui.LoginTest"/>
+            <class name="com.notesapp.tests.ui.NotesCrudTest"/>
+            <class name="com.notesapp.tests.ui.CategoryFilterTest"/>
+        </classes>
+    </test>
+
+    <test name="API Tests">
+        <classes>
+            <class name="com.notesapp.tests.api.AuthApiTest"/>
+            <class name="com.notesapp.tests.api.NotesApiTest"/>
+            <class name="com.notesapp.tests.api.NegativeApiTest"/>
+        </classes>
+    </test>
+
+    <!-- E2E hybrid tests MUST run sequentially — two Chrome instances with 85+ notes
+         causes Chrome 148 renderer timeout on navigate()/refresh() calls -->
+    <test name="E2E Hybrid Tests" parallel="false">
+        <classes>
+            <class name="com.notesapp.tests.e2e.UiApiSyncTest"/>
+            <class name="com.notesapp.tests.e2e.DeleteSyncTest"/>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="21" passed="21" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-25T16:44:07 IST" name="Notes App — Full Suite" finished-at="2026-05-25T16:51:05 IST" duration-ms="418421">
+    <groups>
+    </groups>
+    <test started-at="2026-05-25T16:44:07 IST" name="UI Tests" finished-at="2026-05-25T16:48:44 IST" duration-ms="277048">
+      <class name="com.notesapp.tests.ui.CategoryFilterTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.notesapp.tests.ui.CategoryFilterTest@2f79f192]" started-at="2026-05-25T16:47:38 IST" name="setUp" finished-at="2026-05-25T16:47:39 IST" duration-ms="1100" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginAndSeedData()[pri:0, instance:com.notesapp.tests.ui.CategoryFilterTest@2f79f192]" started-at="2026-05-25T16:47:39 IST" name="loginAndSeedData" finished-at="2026-05-25T16:48:35 IST" depends-on-methods="com.notesapp.tests.ui.CategoryFilterTest.setUp" duration-ms="55968" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAndSeedData -->
+        <test-method signature="testCategoryFilter()[pri:0, instance:com.notesapp.tests.ui.CategoryFilterTest@2f79f192]" started-at="2026-05-25T16:48:35 IST" name="testCategoryFilter" description="TC-UI-05: Filter notes by category — only matching notes shown" finished-at="2026-05-25T16:48:43 IST" duration-ms="8174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCategoryFilter -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.notesapp.tests.ui.CategoryFilterTest@2f79f192]" started-at="2026-05-25T16:48:43 IST" name="tearDown" finished-at="2026-05-25T16:48:44 IST" duration-ms="370" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCategoryFilter status=SUCCESS method=CategoryFilterTest.testCategoryFilter()[pri:0, instance:com.notesapp.tests.ui.CategoryFilterTest@2f79f192] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.notesapp.tests.ui.CategoryFilterTest -->
+      <class name="com.notesapp.tests.ui.NotesCrudTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1]" started-at="2026-05-25T16:44:49 IST" name="setUp" finished-at="2026-05-25T16:44:50 IST" duration-ms="1225" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1]" started-at="2026-05-25T16:44:50 IST" name="login" finished-at="2026-05-25T16:44:55 IST" duration-ms="5336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="testCreateNote()[pri:0, instance:com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1]" started-at="2026-05-25T16:44:55 IST" name="testCreateNote" description="TC-UI-02: Create note via UI and verify in list" finished-at="2026-05-25T16:45:13 IST" duration-ms="17263" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateNote -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1]" started-at="2026-05-25T16:45:13 IST" name="tearDown" finished-at="2026-05-25T16:45:13 IST" duration-ms="592" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateNote status=SUCCESS method=NotesCrudTest.testCreateNote()[pri:0, instance:com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1]" started-at="2026-05-25T16:45:13 IST" name="setUp" finished-at="2026-05-25T16:45:15 IST" duration-ms="1248" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1]" started-at="2026-05-25T16:45:15 IST" name="login" finished-at="2026-05-25T16:45:20 IST" duration-ms="5211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="testCreateNoteBlankTitle()[pri:0, instance:com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1]" started-at="2026-05-25T16:45:20 IST" name="testCreateNoteBlankTitle" description="TC-NEG-03: Create note with blank title shows validation error" finished-at="2026-05-25T16:45:49 IST" duration-ms="28779" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateNoteBlankTitle -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1]" started-at="2026-05-25T16:45:49 IST" name="tearDown" finished-at="2026-05-25T16:45:49 IST" duration-ms="639" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateNoteBlankTitle status=SUCCESS method=NotesCrudTest.testCreateNoteBlankTitle()[pri:0, instance:com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1]" started-at="2026-05-25T16:45:49 IST" name="setUp" finished-at="2026-05-25T16:45:51 IST" duration-ms="1298" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1]" started-at="2026-05-25T16:45:51 IST" name="login" finished-at="2026-05-25T16:45:56 IST" duration-ms="5182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="testEditNote()[pri:0, instance:com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1]" started-at="2026-05-25T16:45:56 IST" name="testEditNote" description="TC-UI-04: Edit existing note and verify updated title" finished-at="2026-05-25T16:47:37 IST" duration-ms="101617" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEditNote -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1]" started-at="2026-05-25T16:47:37 IST" name="tearDown" finished-at="2026-05-25T16:47:38 IST" duration-ms="580" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testEditNote status=SUCCESS method=NotesCrudTest.testEditNote()[pri:0, instance:com.notesapp.tests.ui.NotesCrudTest@3f9b7fe1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.notesapp.tests.ui.NotesCrudTest -->
+      <class name="com.notesapp.tests.ui.LoginTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.notesapp.tests.ui.LoginTest@2282400e]" started-at="2026-05-25T16:44:07 IST" name="setUp" finished-at="2026-05-25T16:44:11 IST" duration-ms="3901" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openLogin()[pri:0, instance:com.notesapp.tests.ui.LoginTest@2282400e]" started-at="2026-05-25T16:44:11 IST" name="openLogin" finished-at="2026-05-25T16:44:14 IST" duration-ms="3251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLogin -->
+        <test-method signature="testLoginEmptyEmail()[pri:0, instance:com.notesapp.tests.ui.LoginTest@2282400e]" started-at="2026-05-25T16:44:14 IST" name="testLoginEmptyEmail" description="TC-NEG-04: Login with blank email shows validation error" finished-at="2026-05-25T16:44:26 IST" duration-ms="11449" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginEmptyEmail -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.notesapp.tests.ui.LoginTest@2282400e]" started-at="2026-05-25T16:44:26 IST" name="tearDown" finished-at="2026-05-25T16:44:26 IST" duration-ms="499" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginEmptyEmail status=SUCCESS method=LoginTest.testLoginEmptyEmail()[pri:0, instance:com.notesapp.tests.ui.LoginTest@2282400e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.notesapp.tests.ui.LoginTest@2282400e]" started-at="2026-05-25T16:44:26 IST" name="setUp" finished-at="2026-05-25T16:44:27 IST" duration-ms="1375" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openLogin()[pri:0, instance:com.notesapp.tests.ui.LoginTest@2282400e]" started-at="2026-05-25T16:44:27 IST" name="openLogin" finished-at="2026-05-25T16:44:30 IST" duration-ms="2561" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLogin -->
+        <test-method signature="testLoginWrongPassword()[pri:0, instance:com.notesapp.tests.ui.LoginTest@2282400e]" started-at="2026-05-25T16:44:30 IST" name="testLoginWrongPassword" description="TC-NEG-01: Login with wrong password shows error" finished-at="2026-05-25T16:44:42 IST" duration-ms="11510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWrongPassword -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.notesapp.tests.ui.LoginTest@2282400e]" started-at="2026-05-25T16:44:42 IST" name="tearDown" finished-at="2026-05-25T16:44:42 IST" duration-ms="455" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginWrongPassword status=SUCCESS method=LoginTest.testLoginWrongPassword()[pri:0, instance:com.notesapp.tests.ui.LoginTest@2282400e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.notesapp.tests.ui.LoginTest@2282400e]" started-at="2026-05-25T16:44:42 IST" name="setUp" finished-at="2026-05-25T16:44:43 IST" duration-ms="1439" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openLogin()[pri:0, instance:com.notesapp.tests.ui.LoginTest@2282400e]" started-at="2026-05-25T16:44:43 IST" name="openLogin" finished-at="2026-05-25T16:44:46 IST" duration-ms="2757" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLogin -->
+        <test-method signature="testValidLogin()[pri:0, instance:com.notesapp.tests.ui.LoginTest@2282400e]" started-at="2026-05-25T16:44:46 IST" name="testValidLogin" description="TC-UI-01: Login with valid credentials" finished-at="2026-05-25T16:44:48 IST" duration-ms="2284" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.notesapp.tests.ui.LoginTest@2282400e]" started-at="2026-05-25T16:44:49 IST" name="tearDown" finished-at="2026-05-25T16:44:49 IST" duration-ms="379" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=LoginTest.testValidLogin()[pri:0, instance:com.notesapp.tests.ui.LoginTest@2282400e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.notesapp.tests.ui.LoginTest -->
+    </test> <!-- UI Tests -->
+    <test started-at="2026-05-25T16:48:44 IST" name="API Tests" finished-at="2026-05-25T16:49:03 IST" duration-ms="19536">
+      <class name="com.notesapp.tests.api.AuthApiTest">
+        <test-method signature="testGetProfile()[pri:0, instance:com.notesapp.tests.api.AuthApiTest@5348d83c]" started-at="2026-05-25T16:48:44 IST" name="testGetProfile" description="TC-API-AUTH-04: GET /profile with valid token returns user data" finished-at="2026-05-25T16:48:53 IST" duration-ms="9719" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetProfile -->
+        <test-method signature="testLoginReturnsToken()[pri:0, instance:com.notesapp.tests.api.AuthApiTest@5348d83c]" started-at="2026-05-25T16:48:53 IST" name="testLoginReturnsToken" description="TC-API-AUTH-01: Login API returns 200 and valid token" finished-at="2026-05-25T16:48:54 IST" duration-ms="596" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginReturnsToken -->
+        <test-method signature="testLoginUnknownEmail()[pri:0, instance:com.notesapp.tests.api.AuthApiTest@5348d83c]" started-at="2026-05-25T16:48:54 IST" name="testLoginUnknownEmail" description="TC-API-AUTH-03: Login with unregistered email returns 401" finished-at="2026-05-25T16:48:54 IST" duration-ms="389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginUnknownEmail -->
+        <test-method signature="testLoginWrongPassword()[pri:0, instance:com.notesapp.tests.api.AuthApiTest@5348d83c]" started-at="2026-05-25T16:48:54 IST" name="testLoginWrongPassword" description="TC-API-AUTH-02: Login with wrong password returns 401" finished-at="2026-05-25T16:48:55 IST" duration-ms="771" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWrongPassword -->
+      </class> <!-- com.notesapp.tests.api.AuthApiTest -->
+      <class name="com.notesapp.tests.api.NotesApiTest">
+        <test-method is-config="true" signature="getToken()[pri:0, instance:com.notesapp.tests.api.NotesApiTest@477021ee]" started-at="2026-05-25T16:48:55 IST" name="getToken" finished-at="2026-05-25T16:48:56 IST" duration-ms="593" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getToken -->
+        <test-method signature="testCreateNote()[pri:0, instance:com.notesapp.tests.api.NotesApiTest@477021ee]" started-at="2026-05-25T16:48:56 IST" name="testCreateNote" description="TC-API-02: POST /notes creates note with correct fields" finished-at="2026-05-25T16:48:57 IST" duration-ms="1380" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateNote -->
+        <test-method signature="testDeleteNote()[pri:0, instance:com.notesapp.tests.api.NotesApiTest@477021ee]" started-at="2026-05-25T16:48:57 IST" name="testDeleteNote" description="TC-API-02b: DELETE /notes/:id removes the note" finished-at="2026-05-25T16:48:59 IST" duration-ms="2410" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteNote -->
+        <test-method signature="testGetAllNotes()[pri:0, instance:com.notesapp.tests.api.NotesApiTest@477021ee]" started-at="2026-05-25T16:48:59 IST" name="testGetAllNotes" description="TC-API-01: GET /notes returns 200 with valid schema and &lt;2s response time" finished-at="2026-05-25T16:49:00 IST" duration-ms="954" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllNotes -->
+        <test-method signature="testUpdateNote()[pri:0, instance:com.notesapp.tests.api.NotesApiTest@477021ee]" started-at="2026-05-25T16:49:00 IST" name="testUpdateNote" description="TC-API-03b: PUT /notes/:id updates note fields" finished-at="2026-05-25T16:49:01 IST" duration-ms="853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateNote -->
+      </class> <!-- com.notesapp.tests.api.NotesApiTest -->
+      <class name="com.notesapp.tests.api.NegativeApiTest">
+        <test-method signature="testCreateNoteWithBadToken()[pri:0, instance:com.notesapp.tests.api.NegativeApiTest@2180e789]" started-at="2026-05-25T16:49:01 IST" name="testCreateNoteWithBadToken" description="TC-NEG-05: POST /notes with invalid token returns 401" finished-at="2026-05-25T16:49:02 IST" duration-ms="353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateNoteWithBadToken -->
+        <test-method signature="testDeleteNonExistentNote()[pri:0, instance:com.notesapp.tests.api.NegativeApiTest@2180e789]" started-at="2026-05-25T16:49:02 IST" name="testDeleteNonExistentNote" description="TC-NEG-06: DELETE /notes with non-existent note ID returns 404" finished-at="2026-05-25T16:49:03 IST" duration-ms="1100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteNonExistentNote -->
+        <test-method signature="testGetNotesWithoutToken()[pri:0, instance:com.notesapp.tests.api.NegativeApiTest@2180e789]" started-at="2026-05-25T16:49:03 IST" name="testGetNotesWithoutToken" description="TC-NEG-02: GET /notes without token returns 401" finished-at="2026-05-25T16:49:03 IST" duration-ms="364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetNotesWithoutToken -->
+      </class> <!-- com.notesapp.tests.api.NegativeApiTest -->
+    </test> <!-- API Tests -->
+    <test started-at="2026-05-25T16:49:03 IST" name="E2E Hybrid Tests" finished-at="2026-05-25T16:51:05 IST" duration-ms="121756">
+      <class name="com.notesapp.tests.e2e.UiApiSyncTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.notesapp.tests.e2e.UiApiSyncTest@2de6f1bc]" started-at="2026-05-25T16:49:03 IST" name="setUp" finished-at="2026-05-25T16:49:05 IST" duration-ms="1406" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.notesapp.tests.e2e.UiApiSyncTest@2de6f1bc]" started-at="2026-05-25T16:49:05 IST" name="setup" finished-at="2026-05-25T16:49:11 IST" duration-ms="6435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testApiResponseTimeUnder2Seconds()[pri:0, instance:com.notesapp.tests.e2e.UiApiSyncTest@2de6f1bc]" started-at="2026-05-25T16:49:11 IST" name="testApiResponseTimeUnder2Seconds" description="TC-E2E-03: API response time for GET /notes is under 2 seconds" finished-at="2026-05-25T16:49:12 IST" duration-ms="486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApiResponseTimeUnder2Seconds -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.notesapp.tests.e2e.UiApiSyncTest@2de6f1bc]" started-at="2026-05-25T16:49:12 IST" name="tearDown" finished-at="2026-05-25T16:49:12 IST" duration-ms="404" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testApiResponseTimeUnder2Seconds status=SUCCESS method=UiApiSyncTest.testApiResponseTimeUnder2Seconds()[pri:0, instance:com.notesapp.tests.e2e.UiApiSyncTest@2de6f1bc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.notesapp.tests.e2e.UiApiSyncTest@2de6f1bc]" started-at="2026-05-25T16:49:12 IST" name="setUp" finished-at="2026-05-25T16:49:13 IST" duration-ms="1465" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.notesapp.tests.e2e.UiApiSyncTest@2de6f1bc]" started-at="2026-05-25T16:49:13 IST" name="setup" finished-at="2026-05-25T16:49:20 IST" duration-ms="6541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testUiNoteAppearsInApi()[pri:0, instance:com.notesapp.tests.e2e.UiApiSyncTest@2de6f1bc]" started-at="2026-05-25T16:49:20 IST" name="testUiNoteAppearsInApi" description="TC-E2E-01: Note created via UI appears in API with matching fields" finished-at="2026-05-25T16:49:41 IST" duration-ms="20868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUiNoteAppearsInApi -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.notesapp.tests.e2e.UiApiSyncTest@2de6f1bc]" started-at="2026-05-25T16:49:41 IST" name="tearDown" finished-at="2026-05-25T16:49:41 IST" duration-ms="574" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testUiNoteAppearsInApi status=SUCCESS method=UiApiSyncTest.testUiNoteAppearsInApi()[pri:0, instance:com.notesapp.tests.e2e.UiApiSyncTest@2de6f1bc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.notesapp.tests.e2e.UiApiSyncTest -->
+      <class name="com.notesapp.tests.e2e.DeleteSyncTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.notesapp.tests.e2e.DeleteSyncTest@5b35c7d]" started-at="2026-05-25T16:49:41 IST" name="setUp" finished-at="2026-05-25T16:49:43 IST" duration-ms="1386" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.notesapp.tests.e2e.DeleteSyncTest@5b35c7d]" started-at="2026-05-25T16:49:43 IST" name="setup" finished-at="2026-05-25T16:49:49 IST" duration-ms="5755" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testApiDeleteReflectedInUI()[pri:0, instance:com.notesapp.tests.e2e.DeleteSyncTest@5b35c7d]" started-at="2026-05-25T16:49:49 IST" name="testApiDeleteReflectedInUI" description="TC-E2E-02: API deletion immediately reflected in UI" finished-at="2026-05-25T16:51:04 IST" duration-ms="75643" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApiDeleteReflectedInUI -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.notesapp.tests.e2e.DeleteSyncTest@5b35c7d]" started-at="2026-05-25T16:51:04 IST" name="tearDown" finished-at="2026-05-25T16:51:05 IST" duration-ms="745" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testApiDeleteReflectedInUI status=SUCCESS method=DeleteSyncTest.testApiDeleteReflectedInUI()[pri:0, instance:com.notesapp.tests.e2e.DeleteSyncTest@5b35c7d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.notesapp.tests.e2e.DeleteSyncTest -->
+    </test> <!-- E2E Hybrid Tests -->
+  </suite> <!-- Notes App — Full Suite -->
+</testng-results>

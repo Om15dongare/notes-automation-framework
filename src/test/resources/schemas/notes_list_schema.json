@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Notes List Response",
+  "type": "object",
+  "required": ["success", "status", "message", "data"],
+  "properties": {
+    "success": { "type": "boolean", "enum": [true] },
+    "status":  { "type": "integer", "enum": [200] },
+    "message": { "type": "string" },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "description", "category", "user_id"],
+        "properties": {
+          "id":          { "type": "string" },
+          "title":       { "type": "string" },
+          "description": { "type": "string" },
+          "category":    { "type": "string", "enum": ["Home", "Work", "Personal"] },
+          "completed":   { "type": "boolean" },
+          "user_id":     { "type": "string" },
+          "created_at":  { "type": "string" },
+          "updated_at":  { "type": "string" }
+        }
+      }
+    }
+  }
+}

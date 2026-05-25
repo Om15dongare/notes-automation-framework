@@ -1,0 +1,16 @@
+com\notesapp\api\ApiClient.class
+com\notesapp\utils\AllureUtils.class
+com\notesapp\pages\NotesPage.class
+com\notesapp\utils\LogUtils.class
+com\notesapp\api\AuthApi.class
+com\notesapp\pages\RegisterPage.class
+com\notesapp\utils\DataUtils.class
+com\notesapp\api\NotesApi.class
+com\notesapp\drivers\DriverManager.class
+com\notesapp\pages\LoginPage.class
+com\notesapp\config\ConfigReader.class
+com\notesapp\utils\WaitUtils.class
+com\notesapp\base\BaseTest.class
+com\notesapp\pages\ProfilePage.class
+com\notesapp\utils\ScreenshotUtils.class
+com\notesapp\base\BasePage.class

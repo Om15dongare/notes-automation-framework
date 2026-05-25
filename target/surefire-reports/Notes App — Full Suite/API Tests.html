@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>TestNG:  API Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>API Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>11/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon May 25 16:48:44 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>19 seconds (19536 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.notesapp.tests.api.NotesApiTest.testDeleteNote()'><b>testDeleteNote</b><br>Test class: com.notesapp.tests.api.NotesApiTest<br>Test method: TC-API-02b: DELETE /notes/:id removes the note</td>
+<td></td>
+<td>2</td>
+<td>com.notesapp.tests.api.NotesApiTest@477021ee</td></tr>
+<tr>
+<td title='com.notesapp.tests.api.NotesApiTest.testCreateNote()'><b>testCreateNote</b><br>Test class: com.notesapp.tests.api.NotesApiTest<br>Test method: TC-API-02: POST /notes creates note with correct fields</td>
+<td></td>
+<td>1</td>
+<td>com.notesapp.tests.api.NotesApiTest@477021ee</td></tr>
+<tr>
+<td title='com.notesapp.tests.api.NegativeApiTest.testCreateNoteWithBadToken()'><b>testCreateNoteWithBadToken</b><br>Test class: com.notesapp.tests.api.NegativeApiTest<br>Test method: TC-NEG-05: POST /notes with invalid token returns 401</td>
+<td></td>
+<td>0</td>
+<td>com.notesapp.tests.api.NegativeApiTest@2180e789</td></tr>
+<tr>
+<td title='com.notesapp.tests.api.NotesApiTest.testUpdateNote()'><b>testUpdateNote</b><br>Test class: com.notesapp.tests.api.NotesApiTest<br>Test method: TC-API-03b: PUT /notes/:id updates note fields</td>
+<td></td>
+<td>0</td>
+<td>com.notesapp.tests.api.NotesApiTest@477021ee</td></tr>
+<tr>
+<td title='com.notesapp.tests.api.AuthApiTest.testLoginReturnsToken()'><b>testLoginReturnsToken</b><br>Test class: com.notesapp.tests.api.AuthApiTest<br>Test method: TC-API-AUTH-01: Login API returns 200 and valid token</td>
+<td></td>
+<td>0</td>
+<td>com.notesapp.tests.api.AuthApiTest@5348d83c</td></tr>
+<tr>
+<td title='com.notesapp.tests.api.AuthApiTest.testLoginUnknownEmail()'><b>testLoginUnknownEmail</b><br>Test class: com.notesapp.tests.api.AuthApiTest<br>Test method: TC-API-AUTH-03: Login with unregistered email returns 401</td>
+<td></td>
+<td>0</td>
+<td>com.notesapp.tests.api.AuthApiTest@5348d83c</td></tr>
+<tr>
+<td title='com.notesapp.tests.api.AuthApiTest.testLoginWrongPassword()'><b>testLoginWrongPassword</b><br>Test class: com.notesapp.tests.api.AuthApiTest<br>Test method: TC-API-AUTH-02: Login with wrong password returns 401</td>
+<td></td>
+<td>0</td>
+<td>com.notesapp.tests.api.AuthApiTest@5348d83c</td></tr>
+<tr>
+<td title='com.notesapp.tests.api.NegativeApiTest.testGetNotesWithoutToken()'><b>testGetNotesWithoutToken</b><br>Test class: com.notesapp.tests.api.NegativeApiTest<br>Test method: TC-NEG-02: GET /notes without token returns 401</td>
+<td></td>
+<td>0</td>
+<td>com.notesapp.tests.api.NegativeApiTest@2180e789</td></tr>
+<tr>
+<td title='com.notesapp.tests.api.NegativeApiTest.testDeleteNonExistentNote()'><b>testDeleteNonExistentNote</b><br>Test class: com.notesapp.tests.api.NegativeApiTest<br>Test method: TC-NEG-06: DELETE /notes with non-existent note ID returns 404</td>
+<td></td>
+<td>1</td>
+<td>com.notesapp.tests.api.NegativeApiTest@2180e789</td></tr>
+<tr>
+<td title='com.notesapp.tests.api.NotesApiTest.testGetAllNotes()'><b>testGetAllNotes</b><br>Test class: com.notesapp.tests.api.NotesApiTest<br>Test method: TC-API-01: GET /notes returns 200 with valid schema and <2s response time</td>
+<td></td>
+<td>0</td>
+<td>com.notesapp.tests.api.NotesApiTest@477021ee</td></tr>
+<tr>
+<td title='com.notesapp.tests.api.AuthApiTest.testGetProfile()'><b>testGetProfile</b><br>Test class: com.notesapp.tests.api.AuthApiTest<br>Test method: TC-API-AUTH-04: GET /profile with valid token returns user data</td>
+<td></td>
+<td>9</td>
+<td>com.notesapp.tests.api.AuthApiTest@5348d83c</td></tr>
+</table><p>
+</body>
+</html>

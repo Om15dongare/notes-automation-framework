@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Notes_App___Full_Suite" class="navigator-link">
+              <span class="suite-name border-passed">Notes App — Full Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Notes_App___Full_Suite" class="navigator-link ">
+                    <span>E:\Capstone_cap\notes-automation\testng-all.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Notes_App___Full_Suite" class="navigator-link ">
+                    <span class="test-stats">3 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Notes_App___Full_Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Notes_App___Full_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Notes_App___Full_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Notes_App___Full_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Notes_App___Full_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">21 methods,   21 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Notes_App___Full_Suite" class="hide-methods passed suite-Notes_App___Full_Suite"> (hide)</a> <!-- hide-methods passed suite-Notes_App___Full_Suite -->
+                      <a href="#" panel-name="suite-Notes_App___Full_Suite" class="show-methods passed suite-Notes_App___Full_Suite"> (show)</a> <!-- show-methods passed suite-Notes_App___Full_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Notes_App___Full_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.e2e.DeleteSyncTest" class="method navigator-link" hash-for-method="testApiDeleteReflectedInUI">testApiDeleteReflectedInUI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.e2e.UiApiSyncTest" class="method navigator-link" hash-for-method="testApiResponseTimeUnder2Seconds">testApiResponseTimeUnder2Seconds</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.ui.CategoryFilterTest" class="method navigator-link" hash-for-method="testCategoryFilter">testCategoryFilter</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.ui.NotesCrudTest" class="method navigator-link" hash-for-method="testCreateNote">testCreateNote</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.api.NotesApiTest" class="method navigator-link" hash-for-method="testCreateNote">testCreateNote</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.ui.NotesCrudTest" class="method navigator-link" hash-for-method="testCreateNoteBlankTitle">testCreateNoteBlankTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.api.NegativeApiTest" class="method navigator-link" hash-for-method="testCreateNoteWithBadToken">testCreateNoteWithBadToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.api.NegativeApiTest" class="method navigator-link" hash-for-method="testDeleteNonExistentNote">testDeleteNonExistentNote</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.api.NotesApiTest" class="method navigator-link" hash-for-method="testDeleteNote">testDeleteNote</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.ui.NotesCrudTest" class="method navigator-link" hash-for-method="testEditNote">testEditNote</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.api.NotesApiTest" class="method navigator-link" hash-for-method="testGetAllNotes">testGetAllNotes</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.api.NegativeApiTest" class="method navigator-link" hash-for-method="testGetNotesWithoutToken">testGetNotesWithoutToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.api.AuthApiTest" class="method navigator-link" hash-for-method="testGetProfile">testGetProfile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.ui.LoginTest" class="method navigator-link" hash-for-method="testLoginEmptyEmail">testLoginEmptyEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.api.AuthApiTest" class="method navigator-link" hash-for-method="testLoginReturnsToken">testLoginReturnsToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.api.AuthApiTest" class="method navigator-link" hash-for-method="testLoginUnknownEmail">testLoginUnknownEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.ui.LoginTest" class="method navigator-link" hash-for-method="testLoginWrongPassword">testLoginWrongPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.api.AuthApiTest" class="method navigator-link" hash-for-method="testLoginWrongPassword">testLoginWrongPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.e2e.UiApiSyncTest" class="method navigator-link" hash-for-method="testUiNoteAppearsInApi">testUiNoteAppearsInApi</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.api.NotesApiTest" class="method navigator-link" hash-for-method="testUpdateNote">testUpdateNote</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Notes_App___Full_Suite" title="com.notesapp.tests.ui.LoginTest" class="method navigator-link" hash-for-method="testValidLogin">testValidLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Notes_App___Full_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Notes_App___Full_Suite" class="panel Notes_App___Full_Suite">
+          <div class="suite-Notes_App___Full_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.notesapp.tests.ui.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoginEmptyEmail">
+                  </a> <!-- testLoginEmptyEmail -->
+                  <span class="method-name">testLoginEmptyEmail</span>
+                  <em>
+(TC-NEG-04: Login with blank email shows validation error)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoginWrongPassword">
+                  </a> <!-- testLoginWrongPassword -->
+                  <span class="method-name">testLoginWrongPassword</span>
+                  <em>
+(TC-NEG-01: Login with wrong password shows error)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testValidLogin">
+                  </a> <!-- testValidLogin -->
+                  <span class="method-name">testValidLogin</span>
+                  <em>
+(TC-UI-01: Login with valid credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Notes_App___Full_Suite-class-passed -->
+          <div class="suite-Notes_App___Full_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.notesapp.tests.api.AuthApiTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetProfile">
+                  </a> <!-- testGetProfile -->
+                  <span class="method-name">testGetProfile</span>
+                  <em>
+(TC-API-AUTH-04: GET /profile with valid token returns user data)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoginReturnsToken">
+                  </a> <!-- testLoginReturnsToken -->
+                  <span class="method-name">testLoginReturnsToken</span>
+                  <em>
+(TC-API-AUTH-01: Login API returns 200 and valid token)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoginUnknownEmail">
+                  </a> <!-- testLoginUnknownEmail -->
+                  <span class="method-name">testLoginUnknownEmail</span>
+                  <em>
+(TC-API-AUTH-03: Login with unregistered email returns 401)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoginWrongPassword">
+                  </a> <!-- testLoginWrongPassword -->
+                  <span class="method-name">testLoginWrongPassword</span>
+                  <em>
+(TC-API-AUTH-02: Login with wrong password returns 401)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Notes_App___Full_Suite-class-passed -->
+          <div class="suite-Notes_App___Full_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.notesapp.tests.api.NotesApiTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateNote">
+                  </a> <!-- testCreateNote -->
+                  <span class="method-name">testCreateNote</span>
+                  <em>
+(TC-API-02: POST /notes creates note with correct fields)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteNote">
+                  </a> <!-- testDeleteNote -->
+                  <span class="method-name">testDeleteNote</span>
+                  <em>
+(TC-API-02b: DELETE /notes/:id removes the note)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAllNotes">
+                  </a> <!-- testGetAllNotes -->
+                  <span class="method-name">testGetAllNotes</span>
+                  <em>
+(TC-API-01: GET /notes returns 200 with valid schema and <2s response time)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUpdateNote">
+                  </a> <!-- testUpdateNote -->
+                  <span class="method-name">testUpdateNote</span>
+                  <em>
+(TC-API-03b: PUT /notes/:id updates note fields)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Notes_App___Full_Suite-class-passed -->
+          <div class="suite-Notes_App___Full_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.notesapp.tests.ui.CategoryFilterTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCategoryFilter">
+                  </a> <!-- testCategoryFilter -->
+                  <span class="method-name">testCategoryFilter</span>
+                  <em>
+(TC-UI-05: Filter notes by category — only matching notes shown)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Notes_App___Full_Suite-class-passed -->
+          <div class="suite-Notes_App___Full_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.notesapp.tests.e2e.DeleteSyncTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testApiDeleteReflectedInUI">
+                  </a> <!-- testApiDeleteReflectedInUI -->
+                  <span class="method-name">testApiDeleteReflectedInUI</span>
+                  <em>
+(TC-E2E-02: API deletion immediately reflected in UI)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Notes_App___Full_Suite-class-passed -->
+          <div class="suite-Notes_App___Full_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.notesapp.tests.api.NegativeApiTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateNoteWithBadToken">
+                  </a> <!-- testCreateNoteWithBadToken -->
+                  <span class="method-name">testCreateNoteWithBadToken</span>
+                  <em>
+(TC-NEG-05: POST /notes with invalid token returns 401)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteNonExistentNote">
+                  </a> <!-- testDeleteNonExistentNote -->
+                  <span class="method-name">testDeleteNonExistentNote</span>
+                  <em>
+(TC-NEG-06: DELETE /notes with non-existent note ID returns 404)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetNotesWithoutToken">
+                  </a> <!-- testGetNotesWithoutToken -->
+                  <span class="method-name">testGetNotesWithoutToken</span>
+                  <em>
+(TC-NEG-02: GET /notes without token returns 401)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Notes_App___Full_Suite-class-passed -->
+          <div class="suite-Notes_App___Full_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.notesapp.tests.e2e.UiApiSyncTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testApiResponseTimeUnder2Seconds">
+                  </a> <!-- testApiResponseTimeUnder2Seconds -->
+                  <span class="method-name">testApiResponseTimeUnder2Seconds</span>
+                  <em>
+(TC-E2E-03: API response time for GET /notes is under 2 seconds)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUiNoteAppearsInApi">
+                  </a> <!-- testUiNoteAppearsInApi -->
+                  <span class="method-name">testUiNoteAppearsInApi</span>
+                  <em>
+(TC-E2E-01: Note created via UI appears in API with matching fields)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Notes_App___Full_Suite-class-passed -->
+          <div class="suite-Notes_App___Full_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.notesapp.tests.ui.NotesCrudTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateNote">
+                  </a> <!-- testCreateNote -->
+                  <span class="method-name">testCreateNote</span>
+                  <em>
+(TC-UI-02: Create note via UI and verify in list)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateNoteBlankTitle">
+                  </a> <!-- testCreateNoteBlankTitle -->
+                  <span class="method-name">testCreateNoteBlankTitle</span>
+                  <em>
+(TC-NEG-03: Create note with blank title shows validation error)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEditNote">
+                  </a> <!-- testEditNote -->
+                  <span class="method-name">testEditNote</span>
+                  <em>
+(TC-UI-04: Edit existing note and verify updated title)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Notes_App___Full_Suite-class-passed -->
+        </div> <!-- panel Notes_App___Full_Suite -->
+        <div panel-name="test-xml-Notes_App___Full_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">E:\Capstone_cap\notes-automation\testng-all.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Notes App — Full Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;io.qameta.allure.testng.AllureTestNg&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;UI Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.notesapp.tests.ui.LoginTest&quot;/&gt;
+      &lt;class name=&quot;com.notesapp.tests.ui.NotesCrudTest&quot;/&gt;
+      &lt;class name=&quot;com.notesapp.tests.ui.CategoryFilterTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- UI Tests --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;API Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.notesapp.tests.api.AuthApiTest&quot;/&gt;
+      &lt;class name=&quot;com.notesapp.tests.api.NotesApiTest&quot;/&gt;
+      &lt;class name=&quot;com.notesapp.tests.api.NegativeApiTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- API Tests --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;E2E Hybrid Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.notesapp.tests.e2e.UiApiSyncTest&quot;/&gt;
+      &lt;class name=&quot;com.notesapp.tests.e2e.DeleteSyncTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- E2E Hybrid Tests --&gt;
+&lt;/suite&gt; &lt;!-- Notes App — Full Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Notes_App___Full_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Notes App — Full Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">UI Tests (3 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">API Tests (3 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">E2E Hybrid Tests (2 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Notes_App___Full_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Notes App — Full Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Notes_App___Full_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Notes App — Full Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Notes_App___Full_Suite');
+function tableData_Notes_App___Full_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(21);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testEditNote')
+data.setCell(0, 2, 'com.notesapp.tests.ui.NotesCrudTest')
+data.setCell(0, 3, 101617);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testApiDeleteReflectedInUI')
+data.setCell(1, 2, 'com.notesapp.tests.e2e.DeleteSyncTest')
+data.setCell(1, 3, 75643);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testCreateNoteBlankTitle')
+data.setCell(2, 2, 'com.notesapp.tests.ui.NotesCrudTest')
+data.setCell(2, 3, 28779);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testUiNoteAppearsInApi')
+data.setCell(3, 2, 'com.notesapp.tests.e2e.UiApiSyncTest')
+data.setCell(3, 3, 20868);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testCreateNote')
+data.setCell(4, 2, 'com.notesapp.tests.ui.NotesCrudTest')
+data.setCell(4, 3, 17263);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testLoginWrongPassword')
+data.setCell(5, 2, 'com.notesapp.tests.ui.LoginTest')
+data.setCell(5, 3, 11510);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testLoginEmptyEmail')
+data.setCell(6, 2, 'com.notesapp.tests.ui.LoginTest')
+data.setCell(6, 3, 11449);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testGetProfile')
+data.setCell(7, 2, 'com.notesapp.tests.api.AuthApiTest')
+data.setCell(7, 3, 9719);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testCategoryFilter')
+data.setCell(8, 2, 'com.notesapp.tests.ui.CategoryFilterTest')
+data.setCell(8, 3, 8174);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testDeleteNote')
+data.setCell(9, 2, 'com.notesapp.tests.api.NotesApiTest')
+data.setCell(9, 3, 2410);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testValidLogin')
+data.setCell(10, 2, 'com.notesapp.tests.ui.LoginTest')
+data.setCell(10, 3, 2284);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testCreateNote')
+data.setCell(11, 2, 'com.notesapp.tests.api.NotesApiTest')
+data.setCell(11, 3, 1380);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testDeleteNonExistentNote')
+data.setCell(12, 2, 'com.notesapp.tests.api.NegativeApiTest')
+data.setCell(12, 3, 1100);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testGetAllNotes')
+data.setCell(13, 2, 'com.notesapp.tests.api.NotesApiTest')
+data.setCell(13, 3, 954);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testUpdateNote')
+data.setCell(14, 2, 'com.notesapp.tests.api.NotesApiTest')
+data.setCell(14, 3, 853);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'testLoginWrongPassword')
+data.setCell(15, 2, 'com.notesapp.tests.api.AuthApiTest')
+data.setCell(15, 3, 771);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testLoginReturnsToken')
+data.setCell(16, 2, 'com.notesapp.tests.api.AuthApiTest')
+data.setCell(16, 3, 596);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'testApiResponseTimeUnder2Seconds')
+data.setCell(17, 2, 'com.notesapp.tests.e2e.UiApiSyncTest')
+data.setCell(17, 3, 486);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testLoginUnknownEmail')
+data.setCell(18, 2, 'com.notesapp.tests.api.AuthApiTest')
+data.setCell(18, 3, 389);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'testGetNotesWithoutToken')
+data.setCell(19, 2, 'com.notesapp.tests.api.NegativeApiTest')
+data.setCell(19, 3, 364);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testCreateNoteWithBadToken')
+data.setCell(20, 2, 'com.notesapp.tests.api.NegativeApiTest')
+data.setCell(20, 3, 353);
+window.suiteTableData['Notes_App___Full_Suite']= { tableData: data, tableDiv: 'times-div-Notes_App___Full_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <div id="times-div-Notes_App___Full_Suite">
+              </div> <!-- times-div-Notes_App___Full_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Notes_App___Full_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Notes App — Full Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Notes_App___Full_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Notes_App___Full_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.notesapp.tests.ui.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, false)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">openLogin</span>
+                <span class="method-start">4149 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLoginEmptyEmail</span>
+                <span class="method-start">7424 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testLoginEmptyEmail status=SUCCESS method=LoginTest.testLoginEmptyEmail()[pri:0, in...)</span>
+                <span class="method-start">18931 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, false)</span>
+                <span class="method-start">19438 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">openLogin</span>
+                <span class="method-start">20816 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLoginWrongPassword</span>
+                <span class="method-start">23381 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testLoginWrongPassword status=SUCCESS method=LoginTest.testLoginWrongPassword()[pri...)</span>
+                <span class="method-start">34894 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, false)</span>
+                <span class="method-start">35355 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">openLogin</span>
+                <span class="method-start">36797 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testValidLogin</span>
+                <span class="method-start">39557 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testValidLogin status=SUCCESS method=LoginTest.testValidLogin()[pri:0, instance:com...)</span>
+                <span class="method-start">41846 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.notesapp.tests.ui.NotesCrudTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, false)</span>
+                <span class="method-start">42229 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">43455 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCreateNote</span>
+                <span class="method-start">48797 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testCreateNote status=SUCCESS method=NotesCrudTest.testCreateNote()[pri:0, instance...)</span>
+                <span class="method-start">66064 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, false)</span>
+                <span class="method-start">66660 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">67912 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCreateNoteBlankTitle</span>
+                <span class="method-start">73126 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testCreateNoteBlankTitle status=SUCCESS method=NotesCrudTest.testCreateNoteBlankTit...)</span>
+                <span class="method-start">101931 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, false)</span>
+                <span class="method-start">102573 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">103873 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testEditNote</span>
+                <span class="method-start">109061 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testEditNote status=SUCCESS method=NotesCrudTest.testEditNote()[pri:0, instance:com...)</span>
+                <span class="method-start">210683 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.notesapp.tests.ui.CategoryFilterTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, true)</span>
+                <span class="method-start">211265 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginAndSeedData</span>
+                <span class="method-start">212368 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCategoryFilter</span>
+                <span class="method-start">268340 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testCategoryFilter status=SUCCESS method=CategoryFilterTest.testCategoryFilter()[pr...)</span>
+                <span class="method-start">276518 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.notesapp.tests.api.AuthApiTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testGetProfile</span>
+                <span class="method-start">276934 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testLoginReturnsToken</span>
+                <span class="method-start">286659 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testLoginUnknownEmail</span>
+                <span class="method-start">287260 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testLoginWrongPassword</span>
+                <span class="method-start">287653 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.notesapp.tests.api.NotesApiTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">getToken</span>
+                <span class="method-start">288427 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testCreateNote</span>
+                <span class="method-start">289021 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDeleteNote</span>
+                <span class="method-start">290406 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetAllNotes</span>
+                <span class="method-start">292819 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUpdateNote</span>
+                <span class="method-start">293782 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.notesapp.tests.api.NegativeApiTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testCreateNoteWithBadToken</span>
+                <span class="method-start">294640 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDeleteNonExistentNote</span>
+                <span class="method-start">294996 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetNotesWithoutToken</span>
+                <span class="method-start">296100 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.notesapp.tests.e2e.UiApiSyncTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, false)</span>
+                <span class="method-start">296513 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">297921 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testApiResponseTimeUnder2Seconds</span>
+                <span class="method-start">304361 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testApiResponseTimeUnder2Seconds status=SUCCESS method=UiApiSyncTest.testApiRespons...)</span>
+                <span class="method-start">304851 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, false)</span>
+                <span class="method-start">305258 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">306726 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testUiNoteAppearsInApi</span>
+                <span class="method-start">313272 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testUiNoteAppearsInApi status=SUCCESS method=UiApiSyncTest.testUiNoteAppearsInApi()...)</span>
+                <span class="method-start">334143 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.notesapp.tests.e2e.DeleteSyncTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, false)</span>
+                <span class="method-start">334724 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">336112 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testApiDeleteReflectedInUI</span>
+                <span class="method-start">341870 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testApiDeleteReflectedInUI status=SUCCESS method=DeleteSyncTest.testApiDeleteReflec...)</span>
+                <span class="method-start">417516 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

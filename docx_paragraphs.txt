@@ -1,0 +1,490 @@
+[0] MANUAL TEST PLAN
+[1] Notes Application - ExpandTesting
+[2] Capstone Project - Section 1 Deliverable
+[3] 
+[4] Prepared by: Om Ganesh Dongare (AIVS Track 7-B)
+[5]    Date: 21st May 2025   |   Project: Selenium Java Advanced Capstone
+[6] 
+[7] Application URL: https://practice.expandtesting.com/notes/app
+[8] Swagger / API Docs: https://practice.expandtesting.com/notes/api/api-docs/
+[9] 
+[10] 
+[11] 
+[12] 
+[13] 
+[14] 
+[15] 
+[16] 
+[17] 
+[18] 
+[19] 
+[20] 
+[21] 
+[22] 
+[23] 
+[24] 
+[25] 
+[26] 
+[27] 
+[28] 
+[29] 
+[30] 
+[31] 
+[32] 
+[33] 
+[34] 
+[35] 
+[36] 
+[37] 
+[38] 
+[39] 
+[40] 
+[41] 
+[42] 
+[43] 
+[44] 
+[45] 
+[46] 
+[47] 
+[48] 
+[49] 
+[50] 
+[51] 
+[52] Section 1 - Requirement Breakdown
+[53] The Notes app lets users create, edit, and delete notes across three categories: Home, Work, and Personal. Testing covers the full SDLC - UI interactions, REST API calls, and the data sync between them. The table below lists every functional and non-functional requirement this plan addresses.
+[54] 
+[55] Req ID
+[56] Module
+[57] Description
+[58] FR-01
+[59] Authentication
+[60] User should be able to log in with valid credentials via UI
+[61] FR-02
+[62] Note Creation
+[63] User can create a note with Category, Title, and Description via UI
+[64] FR-03
+[65] Note Visibility
+[66] Newly created note must appear immediately in the UI list without page refresh
+[67] FR-04
+[68] API – List Notes
+[69] GET /notes endpoint must return a well-formed list of all notes for the logged-in user
+[70] FR-05
+[71] UI–API Sync
+[72] A note created through the UI must be retrievable via the API with identical field values
+[73] FR-06
+[74] Note Deletion (API)
+[75] User can delete a note using the DELETE /notes/:id endpoint
+[76] FR-07
+[77] Delete Sync
+[78] Once a note is deleted via API, it must no longer appear in the UI list
+[79] FR-08
+[80] API Performance
+[81] All API responses must complete within 2 seconds under normal load
+[82] FR-09
+[83] Negative Validation
+[84] System must handle invalid inputs and unauthorized access with appropriate error responses
+[85] 
+[86] 
+[87] 
+[88] 
+[89] 
+[90] 
+[91] 
+[92] 
+[93] 
+[94] 
+[95] 
+[96] 
+[97] 
+[98] 
+[99] 
+[100] 
+[101] 
+[102] 
+[103] 
+[104] 
+[105] 
+[106] 
+[107] 
+[108] 
+[109] 
+[110] 
+[111] 
+[112] 
+[113] 
+[114] 
+[115] 
+[116] 
+[117] 
+[118] 
+[119] 
+[120] 
+[121] Section 2 - Manual Test Plan
+[122] 2.1 Purpose
+[123] This plan covers baseline manual validation of the Notes app before automation kicks in. The goal is to confirm that UI flows work as expected, the API behaves correctly, and both layers stay in sync with each other. Passing these manually gives us confidence the app is stable enough to automate.
+[124] 2.2 Scope
+[125] In Scope
+[126] UI: user registration, login, note creation, note edit, note deletion, category filtering
+[127] API: POST /users/login, GET /notes, POST /notes, PATCH /notes/:id, DELETE /notes/:id
+[128] End-to-end data sync: UI-created notes verified in API, API-deleted notes verified absent in UI
+[129] Negative cases: wrong credentials, missing fields, unauthenticated API calls
+[130] 
+[131] Out of Scope
+[132] Performance load testing (handled in Section 3)
+[133] Security penetration testing
+[134] Cross-browser compatibility (primary browser: Chrome)
+[135] 
+[136] 2.3 Test Strategy
+[137] 
+[138] Layer
+[139] Approach
+[140] Tools
+[141] UI Testing
+[142] Structured test cases + exploratory runs
+[143] Chrome Browser, Selenium (manual run)
+[144] API Testing
+[145] Request/response validation, schema checks
+[146] Postman, Swagger UI
+[147] E2E / Hybrid
+[148] Create via UI → verify via API, delete via API → verify UI
+[149] Manual cross-check
+[150] Negative
+[151] Boundary, invalid data, unauthorized access
+[152] Both UI and API
+[153] 
+[154] 
+[155] 
+[156] 2.5 Test Data
+[157] Login: email = test@expandtesting.com, password = Test@1234
+[158] Note fields: Category (Home / Work / Personal), Title (string, max 100 chars), Description (string, max 1000 chars)
+[159] Negative: empty Title, wrong password, expired/absent token
+[160] 
+[161] 
+[162] 
+[163] 
+[164] 
+[165] 
+[166] Section 3 - Test Scenarios
+[167] 
+[168] Each scenario below corresponds to a functional requirement. They are the 'what to test' - the detailed steps are in Section 4.
+[169] 
+[170] TS ID
+[171] Scenario Name
+[172] Description
+[173] Layer
+[174] Req
+[175] TS-01
+[176] Login with valid credentials
+[177] Verify that entering correct email + password lands the user on the dashboard
+[178] UI
+[179] FR-01
+[180] TS-02
+[181] Create a note via UI
+[182] Fill in Category, Title, and Description; submit; confirm the note shows in the list
+[183] UI
+[184] FR-02, FR-03
+[185] TS-03
+[186] Validate GET /notes API
+[187] Call GET /notes after login; confirm response is 200 with an array of note objects
+[188] API
+[189] FR-04
+[190] TS-04
+[191] UI note visible in API
+[192] Create a note in UI; fetch GET /notes; confirm that note exists with matching fields
+[193] Hybrid
+[194] FR-05
+[195] TS-05
+[196] Delete note via API
+[197] Send DELETE /notes/:id; confirm 200 response and note no longer in GET response
+[198] API
+[199] FR-06
+[200] TS-06
+[201] Deleted note gone from UI
+[202] After API deletion, refresh UI and confirm the note is not in the list
+[203] Hybrid
+[204] FR-07
+[205] TS-07
+[206] API response under 2 seconds
+[207] Time GET /notes and POST /notes calls; assert response time < 2000ms
+[208] API
+[209] FR-08
+[210] TS-08
+[211] Login with wrong password
+[212] Enter a registered email with an incorrect password; expect an error message in UI
+[213] UI
+[214] FR-09
+[215] TS-09
+[216] Create note with missing fields
+[217] Submit the note form leaving Title blank; confirm validation error appears
+[218] UI
+[219] FR-09
+[220] TS-10
+[221] Unauthorized API access
+[222] Call GET /notes without a token; confirm API returns 401 Unauthorized
+[223] API
+[224] FR-09
+[225] TS-11
+[226] Edit an existing note via UI
+[227] Open a saved note, change the Title and Description, save it, and confirm changes persist in the UI list
+[228] UI
+[229] FR-02, FR-03
+[230] TS-12
+[231] Filter notes by category
+[232] Use the category filter on the dashboard; confirm only notes matching the selected category are shown
+[233] UI
+[234] FR-03
+[235] TS-13
+[236] Delete user account via API
+[237] Call DELETE /users/delete-account; confirm 200 and that subsequent login attempt returns 401
+[238] API
+[239] FR-06
+[240] 
+[241] 
+[242] 
+[243] 
+[244] 
+[245] 
+[246] 
+[247] 
+[248] 
+[249] 
+[250] 
+[251] 
+[252] 
+[253] 
+[254] 
+[255] 
+[256] 
+[257] Section 4 - Test Cases
+[258] Test cases follow the same structure shown in the capstone brief. Each covers a single scenario and references its requirement.
+[259] 
+[260] TC-UI-01 - Valid Login
+[261] Field
+[262] Details
+[263] Test Case ID
+[264] TC-UI-01
+[265] Test Scenario
+[266] TS-01 - Login with valid credentials
+[267] Test Steps
+[268] 1. Navigate to the login page. 
+[269] 2. Enter valid email: test@expandtesting.com 
+[270] 3. Enter password: Test@1234 
+[271] 4. Click the Login button. 
+[272] 5. Observe the page after submission.
+[273] Expected Result
+[274] User is redirected to the Notes dashboard. Username is displayed in the top-right. No error messages are visible.
+[275] 
+[276] 
+[277] TC-UI-02 - Create Note via UI
+[278] Field
+[279] Details
+[280] Test Case ID
+[281] TC-UI-02
+[282] Test Scenario
+[283] TS-02 - Create a note via UI
+[284] Test Steps
+[285] 1. Click the + Add Note button. 
+[286] 2. Select Category: Home. 
+[287] 3. Enter Title: Grocery List. 
+[288] 4. Enter Description: Buy milk, eggs, and bread. 
+[289] 5. Click Save. 
+[290] 6. Observe the notes list.
+[291] Expected Result
+[292] The new note 'Grocery List' appears at the top of the list with correct Category and Description. No page reload is required.
+[293] 
+[294] TC-API-01 - GET /notes Validation + Response Time
+[295] Field
+[296] Details
+[297] Test Case ID
+[298] TC-API-01
+[299] Test Scenario
+[300] TS-03 - Validate GET /notes API
+[301] Test Steps
+[302] 1. Open Postman (or Swagger UI). 2. Set Authorization header: Bearer <token>. 3. Send GET request to: https://practice.expandtesting.com/notes/api/notes 4. Record response time and inspect the body.
+[303] Expected Result
+[304] HTTP 200 OK. Response body has success: true and a data array containing note objects. Response time is under 2000ms.
+[305] `
+[306] TC-E2E-01 - UI Note Visible in API (Data Consistency)
+[307] Field
+[308] Details
+[309] Test Case ID
+[310] TC-E2E-01
+[311] Test Scenario
+[312] TS-04 - UI-created note appears in API response
+[313] Test Steps
+[314] 1. In the UI, create a note: Category=Work, Title=Sprint Planning, Description=Define Q3 goals. 2. Note the title shown in the UI. 3. In Postman, call GET /notes with the auth token. 4. Locate the note 'Sprint Planning' in the response. 5. Compare Category, Title, and Description between UI and API.
+[315] Expected Result
+[316] The API response contains a note with Category=Work, Title=Sprint Planning, Description=Define Q3 goals. All three fields match UI exactly. No field is missing or different.
+[317] 
+[318] 
+[319] 
+[320] TC-E2E-02 - API Deletion Reflected in UI
+[321] Field
+[322] Details
+[323] Test Case ID
+[324] TC-E2E-02
+[325] Test Scenario
+[326] TS-06 - Deleted note disappears from UI
+[327] Test Steps
+[328] 1. In Postman, send DELETE /notes/:id with a valid note ID and auth token. 2. Confirm 200 OK in API response. 3. Switch to the UI (without clearing cache). 4. Refresh the Notes list page. 5. Search for the deleted note by title.
+[329] Expected Result
+[330] The deleted note is no longer visible in the UI list. No stale data or ghost entry remains. The count of notes is reduced by 1.
+[331] 
+[332] TC-NEG-01 - Login with Wrong Password
+[333] Field
+[334] Details
+[335] Test Case ID
+[336] TC-NEG-01
+[337] Test Scenario
+[338] TS-08 - Login with wrong password
+[339] Test Steps
+[340] 1. Enter a valid registered email. 2. Enter an incorrect password: wrongpass123. 3. Click Login. 4. Observe the page response.
+[341] Expected Result
+[342] Login fails. An inline error message appears (e.g., 'Invalid email or password'). User remains on the login page. No dashboard access is granted.
+[343] 
+[344] TC-NEG-02 - Unauthenticated API Access
+[345] Field
+[346] Details
+[347] Test Case ID
+[348] TC-NEG-02
+[349] Test Scenario
+[350] TS-10 - Unauthorized API access
+[351] Test Steps
+[352] 1. Open Postman. 2. Set request to GET https://practice.expandtesting.com/notes/api/notes 3. Remove or leave blank the Authorization header. 4. Send the request. 5. Inspect status code and response body.
+[353] Expected Result
+[354] HTTP 401 Unauthorized. Response body contains an error message such as 'No authentication token specified'. Notes data is NOT returned.
+[355] 
+[356] TC-UI-04 - Edit an Existing Note via UI
+[357] Field
+[358] Details
+[359] Test Case ID
+[360] TC-UI-04
+[361] Test Scenario
+[362] TS-11 - Edit an existing note via UI
+[363] Test Steps
+[364] 1. On the Notes dashboard, click the note titled Grocery List. 2. Click the Edit (pencil) icon. 3. Change Title to: Weekly Grocery List. 4. Append to Description: Also buy fruits. 5. Click Save. 6. Return to Notes list and locate the note.
+[365] Expected Result
+[366] The note in the list now shows Updated title: Weekly Grocery List. Description reflects appended text. No duplicate entry is created.
+[367] 
+[368] TC-UI-05 - Filter Notes by Category
+[369] Field
+[370] Details
+[371] Test Case ID
+[372] TC-UI-05
+[373] Test Scenario
+[374] TS-12 - Filter notes by category
+[375] Test Steps
+[376] 1. On the Notes dashboard, locate the category filter tabs or dropdown. 2. Select category: Work. 3. Observe which notes are displayed. 4. Switch to category: Home. 5. Observe the updated list. 6. Select All to reset the filter.
+[377] Expected Result
+[378] Work filter shows only Work notes. Home filter shows only Home notes. All filter restores full list. No notes bleed across filter boundaries.
+[379] 
+[380] 
+[381] TC-API-03 - Delete User Account via API
+[382] Field
+[383] Details
+[384] Test Case ID
+[385] TC-API-03
+[386] Test Scenario
+[387] TS-13 - Delete user account via API
+[388] Test Steps
+[389] 1. In Postman, set Authorization: Bearer <token> for the disposable account. 2. Send DELETE to: /notes/api/users/delete-account 3. Inspect status code and response body. 4. Attempt POST /users/login with the same credentials. 5. Inspect the login response.
+[390] Expected Result
+[391] Step 3: HTTP 200. success: true. Message confirms deletion. Step 5: HTTP 401. Login fails - account no longer exists. All account data removed.
+[392] 
+[393] 
+[394] Section 5 - Requirement Traceability Matrix (RTM)
+[395] 
+[396] Every requirement map to at least one scenario and one test case. This table confirms there are no gaps in coverage.
+[397] 
+[398] Req ID
+[399] Scenario ID
+[400] Test Case ID
+[401] Test Case Name
+[402] Layer
+[403] Status
+[404] FR-01
+[405] TS-01
+[406] TC-UI-01
+[407] Login with valid credentials
+[408] UI
+[409] Passed
+[410] FR-02
+[411] TS-02
+[412] TC-UI-02
+[413] Create a note via UI
+[414] UI
+[415] Passed
+[416] FR-03
+[417] TS-02
+[418] TC-UI-02
+[419] Create a note via UI
+[420] UI
+[421] Passed
+[422] FR-04
+[423] TS-03
+[424] TC-API-01
+[425] Validate GET /notes API
+[426] API
+[427] Passed
+[428] FR-05
+[429] TS-04
+[430] TC-E2E-01
+[431] UI note visible in API
+[432] Hybrid
+[433] Passed
+[434] FR-06
+[435] TS-05
+[436] TC-API-02
+[437] Delete note via API
+[438] API
+[439] Passed
+[440] FR-07
+[441] TS-06
+[442] TC-E2E-02
+[443] Deleted note gone from UI
+[444] Hybrid
+[445] Passed
+[446] FR-08
+[447] TS-07
+[448] TC-API-01
+[449] API response under 2 seconds
+[450] API
+[451] Passed
+[452] FR-09
+[453] TS-08
+[454] TC-NEG-01
+[455] Login with wrong password
+[456] UI
+[457] Passed
+[458] FR-09
+[459] TS-09
+[460] TC-NEG-03
+[461] Create note with missing fields
+[462] UI
+[463] Passed
+[464] FR-09
+[465] TS-10
+[466] TC-NEG-02
+[467] Unauthorized API access
+[468] API
+[469] Passed
+[470] FR-02, FR-03
+[471] TS-11
+[472] TC-UI-04
+[473] Edit an existing note via UI
+[474] UI
+[475] Passed
+[476] FR-03
+[477] TS-12
+[478] TC-UI-05
+[479] Filter notes by category
+[480] UI
+[481] Passed
+[482] FR-06
+[483] TS-13
+[484] TC-API-03
+[485] Delete user account via API
+[486] API
+[487] Passed
+[488] 
+[489] 
