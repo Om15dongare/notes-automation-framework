@@ -25,23 +25,7 @@ pipeline {
             }
         }
 
-        // ── 2. Set headless=true for CI (no credentials needed) ───────────────
-        stage('Configure') {
-            steps {
-                echo "=== Setting headless=true for CI run ==="
-                script {
-                    def configFile = 'src/test/resources/config.properties'
-                    def content = readFile(configFile)
-                    content = content
-                        .replaceAll(/headless=.*/, 'headless=true')
-                        .replaceAll(/browser=.*/, 'browser=chrome')
-                    writeFile file: configFile, text: content
-                    echo "config.properties updated — headless=true applied."
-                }
-            }
-        }
 
-        // ── 3. Compile ────────────────────────────────────────────────────────
         stage('Build') {
             steps {
                 echo "=== Compiling project ==="
@@ -49,11 +33,11 @@ pipeline {
             }
         }
 
-        // ── 4. Run Full Test Suite ─────────────────────────────────────────────
+        // ── 3. Run Full Test Suite ─────────────────────────────────────────────
         stage('Test') {
             steps {
-                echo "=== Running all 21 tests ==="
-                bat 'mvn test -Dsurefire.suiteXmlFiles=testng-all.xml -q'
+                echo "=== Running all 21 tests (headless=true via testng-all.xml) ==="
+                bat 'mvn test -Dsurefire.suiteXmlFiles=testng-all.xml -Dheadless=true -q'
             }
             post {
                 always {
