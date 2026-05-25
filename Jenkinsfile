@@ -3,22 +3,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven_3.9'   // Must match the name configured in Jenkins → Global Tool Configuration
-        jdk   'JDK_25'      // Must match the name configured in Jenkins → Global Tool Configuration
-    }
-
-    environment {
-        // ── Credentials (set as Jenkins Secret Text) ──────────────────────
-        USER_EMAIL    = credentials('notes-app-email')      // omgdongare@gmail.com
-        USER_PASSWORD = credentials('notes-app-password')   // 123456
-
-        // ── Suite & browser ───────────────────────────────────────────────
-        SUITE_XML   = 'testng-all.xml'
-        BROWSER     = 'chrome'
-        HEADLESS    = 'true'          // Always headless on CI
-
-        // ── Allure ────────────────────────────────────────────────────────
-        ALLURE_RESULTS = 'allure-results'
+        maven 'Maven_3.9'   // Must match name in Jenkins → Global Tool Configuration
+        jdk   'JDK_25'      // Must match name in Jenkins → Global Tool Configuration
     }
 
     options {
@@ -30,7 +16,7 @@ pipeline {
 
     stages {
 
-        // ── 1. Checkout ──────────────────────────────────────────────────
+        // ── 1. Checkout ────────────────────────────────────────────────────────
         stage('Checkout') {
             steps {
                 echo "=== Cloning repository from GitHub ==="
@@ -39,53 +25,45 @@ pipeline {
             }
         }
 
-        // ── 2. Setup config.properties with CI credentials ───────────────
+        // ── 2. Set headless=true for CI (no credentials needed) ───────────────
         stage('Configure') {
             steps {
-                echo "=== Injecting CI credentials into config.properties ==="
+                echo "=== Setting headless=true for CI run ==="
                 script {
                     def configFile = 'src/test/resources/config.properties'
                     def content = readFile(configFile)
                     content = content
-                        .replaceAll(/user\.email=.*/, "user.email=${USER_EMAIL}")
-                        .replaceAll(/user\.password=.*/, "user.password=${USER_PASSWORD}")
-                        .replaceAll(/headless=.*/, "headless=${HEADLESS}")
-                        .replaceAll(/browser=.*/, "browser=${BROWSER}")
+                        .replaceAll(/headless=.*/, 'headless=true')
+                        .replaceAll(/browser=.*/, 'browser=chrome')
                     writeFile file: configFile, text: content
-                    echo "config.properties updated for CI run."
+                    echo "config.properties updated — headless=true applied."
                 }
             }
         }
 
-        // ── 3. Build (compile only, no tests) ────────────────────────────
+        // ── 3. Compile ────────────────────────────────────────────────────────
         stage('Build') {
             steps {
                 echo "=== Compiling project ==="
-                sh 'mvn clean compile test-compile -q'
+                bat 'mvn clean compile test-compile -q'
             }
         }
 
-        // ── 4. Run Full Test Suite ────────────────────────────────────────
+        // ── 4. Run Full Test Suite ─────────────────────────────────────────────
         stage('Test') {
             steps {
-                echo "=== Running all 21 tests via ${SUITE_XML} ==="
-                sh """
-                    mvn test \
-                        -Dsurefire.suiteXmlFiles=${SUITE_XML} \
-                        -Dbrowser=${BROWSER} \
-                        -Dheadless=${HEADLESS} \
-                        -q
-                """
+                echo "=== Running all 21 tests ==="
+                bat 'mvn test -Dsurefire.suiteXmlFiles=testng-all.xml -q'
             }
             post {
                 always {
-                    echo "=== Archiving TestNG results ==="
-                    junit '**/target/surefire-reports/*.xml'
+                    echo "=== Collecting TestNG results ==="
+                    junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
                 }
             }
         }
 
-        // ── 5. Allure Report ──────────────────────────────────────────────
+        // ── 5. Allure Report ───────────────────────────────────────────────────
         stage('Allure Report') {
             steps {
                 echo "=== Generating Allure Report ==="
@@ -94,31 +72,31 @@ pipeline {
                     jdk              : '',
                     properties       : [],
                     reportBuildPolicy: 'ALWAYS',
-                    results          : [[path: "${ALLURE_RESULTS}"]]
+                    results          : [[path: 'allure-results']]
                 ])
             }
         }
     }
 
-    // ── Post-build actions ────────────────────────────────────────────────
+    // ── Post-build actions ─────────────────────────────────────────────────────
     post {
         success {
             echo """
 ╔══════════════════════════════════════════════════╗
-║  ✅  BUILD SUCCESS — All 21 Tests Passed!        ║
+║  BUILD SUCCESS - All 21 Tests Passed!            ║
 ╚══════════════════════════════════════════════════╝
             """
         }
         failure {
             echo """
 ╔══════════════════════════════════════════════════╗
-║  ❌  BUILD FAILED — Check Allure report above    ║
+║  BUILD FAILED - Check console output above       ║
 ╚══════════════════════════════════════════════════╝
             """
         }
         always {
-            echo "=== Archiving Allure results folder ==="
-            archiveArtifacts artifacts: "${ALLURE_RESULTS}/**", allowEmptyArchive: true
+            echo "=== Archiving Allure results ==="
+            archiveArtifacts artifacts: 'allure-results/**', allowEmptyArchive: true
             cleanWs()
         }
     }
