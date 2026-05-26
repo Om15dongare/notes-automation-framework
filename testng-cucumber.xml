@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+    testng-cucumber.xml
+    ═══════════════════
+    Runs ONLY the Cucumber BDD layer via CucumberRunner.
+    This suite is intentionally separate from testng-all.xml so that:
+      • The existing 21 TestNG tests remain untouched.
+      • Cucumber scenarios can be triggered independently in Jenkins.
+      • Both can be combined in a single Jenkins build if desired.
+
+    Usage:
+      mvn test -Dsurefire.suiteXmlFiles=testng-cucumber.xml -Dheadless=true
+
+    Tag filtering (Cucumber):
+      mvn test -Dsurefire.suiteXmlFiles=testng-cucumber.xml -Dcucumber.filter.tags="@smoke"
+-->
+<suite name="Notes App — Cucumber BDD Suite"
+       verbose="1"
+       parallel="none">
+
+    <!-- Pass browser/headless down to Hooks.java via System.getProperty() -->
+    <!-- headless=false → visible browser for local runs.
+         Jenkins overrides this with -Dheadless=true on the command line. -->
+    <parameter name="browser"  value="chrome"/>
+    <parameter name="headless" value="false"/>
+
+    <test name="Cucumber BDD Tests">
+        <classes>
+            <class name="com.notesapp.cucumber.CucumberRunner"/>
+        </classes>
+    </test>
+
+</suite>

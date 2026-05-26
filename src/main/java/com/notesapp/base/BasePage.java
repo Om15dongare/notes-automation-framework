@@ -30,14 +30,14 @@ public abstract class BasePage {
     protected void click(By locator) {
         log.debug("Clicking: {}", locator);
         try {
-            find(locator).click();
+            WaitUtils.waitForClickable(locator).click();
         } catch (ElementClickInterceptedException e) {
             log.warn("Standard click intercepted — retrying with JS: {}", locator);
             jsClick(locator);
         } catch (StaleElementReferenceException e) {
             log.warn("Stale element on click — retrying: {}", locator);
             sleepMs(500);
-            find(locator).click();
+            WaitUtils.waitForClickable(locator).click();
         }
     }
 

@@ -29,15 +29,15 @@ pipeline {
         stage('Build') {
             steps {
                 echo "=== Compiling project ==="
-                bat 'mvn clean compile test-compile -q'
+                bat 'mvn clean compile test-compile'
             }
         }
 
-        // ── 3. Run Full Test Suite ─────────────────────────────────────────────
-        stage('Test') {
+        // ── 3. Run TestNG Suite (existing 21 tests) ───────────────────────────
+        stage('TestNG Tests') {
             steps {
-                echo "=== Running all 21 tests (headless=true via testng-all.xml) ==="
-                bat 'mvn test -Dsurefire.suiteXmlFiles=testng-all.xml -Dheadless=true -q'
+                echo "=== Running all 21 TestNG tests (headless=true via testng-all.xml) ==="
+                bat 'mvn test -Dsurefire.suiteXmlFiles=testng-all.xml -Dheadless=true'
             }
             post {
                 always {
@@ -47,16 +47,37 @@ pipeline {
             }
         }
 
-        // ── 5. Allure Report ───────────────────────────────────────────────────
+        // ── 4. Run Cucumber BDD Suite ──────────────────────────────────────────
+        stage('Cucumber BDD Tests') {
+            steps {
+                echo "=== Running Cucumber BDD scenarios (headless=true via testng-cucumber.xml) ==="
+                // catchError keeps the pipeline going so Allure still generates even if BDD fails
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    bat 'mvn test -Dsurefire.suiteXmlFiles=testng-cucumber.xml -Dheadless=true'
+                }
+            }
+            post {
+                always {
+                    echo "=== Collecting Cucumber results ==="
+                    junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
+                    // Archive Cucumber HTML report as a build artifact
+                    archiveArtifacts artifacts: 'target/cucumber-reports/**', allowEmptyArchive: true
+                }
+            }
+        }
+
+        // ── 5. Allure Report (covers TestNG + Cucumber results) ───────────────
         stage('Allure Report') {
             steps {
-                echo "=== Generating Allure Report ==="
+                echo "=== Generating unified Allure Report (TestNG + Cucumber) ==="
                 allure([
+                    commandline      : 'Allure',
                     includeProperties: false,
                     jdk              : '',
                     properties       : [],
                     reportBuildPolicy: 'ALWAYS',
-                    results          : [[path: 'allure-results']]
+                    // Both TestNG and Cucumber write to the same allure-results dir
+                    results          : [[path: 'target/allure-results']]
                 ])
             }
         }
@@ -67,7 +88,7 @@ pipeline {
         success {
             echo """
 ╔══════════════════════════════════════════════════╗
-║  BUILD SUCCESS - All 21 Tests Passed!            ║
+║  BUILD SUCCESS - TestNG + Cucumber BDD Passed!   ║
 ╚══════════════════════════════════════════════════╝
             """
         }
@@ -80,7 +101,7 @@ pipeline {
         }
         always {
             echo "=== Archiving Allure results ==="
-            archiveArtifacts artifacts: 'allure-results/**', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'target/allure-results/**', allowEmptyArchive: true
             cleanWs()
         }
     }

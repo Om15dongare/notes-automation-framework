@@ -4,6 +4,8 @@ import com.notesapp.base.BasePage;
 import com.notesapp.config.ConfigReader;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -22,7 +24,7 @@ public class LoginPage extends BasePage {
     private final By emailField    = By.id("email");
     private final By passwordField = By.id("password");
     private final By loginButton   = By.cssSelector("button.btn-primary");
-    private final By errorMessage  = By.cssSelector("div.alert.alert-danger");
+    private final By errorMessage  = By.cssSelector("div.alert.alert-danger, [data-testid='alert-message']");
 
     // ===== Actions =====
 
@@ -75,6 +77,19 @@ public class LoginPage extends BasePage {
         return this;
     }
 
+    @Step("Click Login and wait for dynamic transition (either success or failure)")
+    public LoginPage clickLoginDynamic() {
+        click(loginButton);
+        try {
+            new WebDriverWait(getDriver(), Duration.ofSeconds(8))
+                    .until(d -> !d.getCurrentUrl().contains("/login") || 
+                               d.findElements(errorMessage).size() > 0 && d.findElement(errorMessage).isDisplayed());
+        } catch (Exception e) {
+            log.warn("Login transition did not complete within 8s");
+        }
+        return this;
+    }
+
     @Step("Login with credentials: {email}")
     public NotesPage loginAs(String email, String password) {
         open();
@@ -99,8 +114,14 @@ public class LoginPage extends BasePage {
     }
 
     public boolean isEmailFieldErrorDisplayed() {
-        // Same alert-danger div for all login errors (empty email → API rejects)
-        return isErrorDisplayed();
+        try {
+            WebElement emailEl = getDriver().findElement(emailField);
+            JavascriptExecutor js = (JavascriptExecutor) getDriver();
+            boolean isHtml5Invalid = (Boolean) js.executeScript("return !arguments[0].validity.valid;", emailEl);
+            return isHtml5Invalid || isErrorDisplayed();
+        } catch (Exception e) {
+            return isErrorDisplayed();
+        }
     }
 
     public boolean isOnLoginPage() {

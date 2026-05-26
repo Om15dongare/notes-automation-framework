@@ -23,7 +23,7 @@ public class LoginSteps {
 
     @When("the user clicks the Login button")
     public void clickLoginButton() {
-        loginPage.clickLoginExpectingFailure();
+        loginPage.clickLoginDynamic();
     }
 
     @Then("the user should be redirected to the Notes dashboard")
