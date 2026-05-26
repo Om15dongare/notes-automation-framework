@@ -3,8 +3,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven_3.9'   // Must match name in Jenkins → Global Tool Configuration
-        jdk   'JDK_25'      // Must match name in Jenkins → Global Tool Configuration
+        maven 'Maven_3.9'
+        jdk 'JDK_25'
     }
 
     options {
@@ -14,74 +14,117 @@ pipeline {
         disableConcurrentBuilds()
     }
 
+    environment {
+        HEADLESS = 'false'
+    }
+
     stages {
 
-        // ── 1. Checkout ────────────────────────────────────────────────────────
+        // ─────────────────────────────────────────────
+        // 1. Checkout Source Code
+        // ─────────────────────────────────────────────
         stage('Checkout') {
             steps {
                 echo "=== Cloning repository from GitHub ==="
+
                 checkout scm
-                echo "Branch: ${env.GIT_BRANCH}  |  Commit: ${env.GIT_COMMIT}"
+
+                echo "Branch: ${env.GIT_BRANCH}"
+                echo "Commit: ${env.GIT_COMMIT}"
             }
         }
 
-
+        // ─────────────────────────────────────────────
+        // 2. Build Project
+        // ─────────────────────────────────────────────
         stage('Build') {
             steps {
+
                 echo "=== Compiling project ==="
-                bat 'mvn clean compile test-compile'
+
+                bat '''
+                    mvn clean compile test-compile
+                '''
             }
         }
 
-        // ── 3. Run Full Test Suite ─────────────────────────────────────────────
+        // ─────────────────────────────────────────────
+        // 3. Execute Full Test Suite
+        // ─────────────────────────────────────────────
         stage('Test') {
             steps {
-                echo "=== Running all 21 tests (headless=true via testng-all.xml) ==="
-                bat 'mvn test -Dsurefire.suiteXmlFiles=testng-all.xml -Dheadless=true'
+
+                echo "=== Running automation suite ==="
+
+                bat """
+                    mvn test ^
+                    -Dsurefire.suiteXmlFiles=testng-all.xml ^
+                    -Dheadless=${HEADLESS}
+                """
             }
+
             post {
+
                 always {
+
                     echo "=== Collecting TestNG results ==="
-                    junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
+
+                    junit allowEmptyResults: true,
+                           testResults: '**/target/surefire-reports/*.xml'
                 }
             }
         }
 
-        // ── 5. Allure Report ───────────────────────────────────────────────────
+        // ─────────────────────────────────────────────
+        // 4. Generate Allure Report
+        // ─────────────────────────────────────────────
         stage('Allure Report') {
             steps {
+
                 echo "=== Generating Allure Report ==="
+
                 allure([
-                     commandline: 'Allure',
+                    commandline: 'Allure',
                     includeProperties: false,
-                    jdk              : '',
-                    properties       : [],
+                    jdk: '',
+                    properties: [],
                     reportBuildPolicy: 'ALWAYS',
-                    results          : [[path: 'allure-results']]
+                    results: [[path: 'allure-results']]
                 ])
             }
         }
     }
 
-    // ── Post-build actions ─────────────────────────────────────────────────────
+    // ─────────────────────────────────────────────
+    // Post Build Actions
+    // ─────────────────────────────────────────────
     post {
+
         success {
-            echo """
+
+            echo '''
 ╔══════════════════════════════════════════════════╗
-║  BUILD SUCCESS - All 21 Tests Passed!            ║
+║  BUILD SUCCESS - All Tests Passed Successfully  ║
 ╚══════════════════════════════════════════════════╝
-            """
+'''
         }
+
         failure {
-            echo """
+
+            echo '''
 ╔══════════════════════════════════════════════════╗
-║  BUILD FAILED - Check console output above       ║
+║  BUILD FAILED - Check Console Output            ║
 ╚══════════════════════════════════════════════════╝
-            """
+'''
         }
+
         always {
-            echo "=== Archiving Allure results ==="
-            archiveArtifacts artifacts: 'allure-results/**', allowEmptyArchive: true
+
+            echo "=== Archiving Allure Results ==="
+
+            archiveArtifacts artifacts: 'allure-results/**',
+                              allowEmptyArchive: true
+
             cleanWs()
         }
     }
