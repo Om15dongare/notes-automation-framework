@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
@@ -23,11 +24,31 @@ public abstract class BaseTest {
 
     protected final Logger log = LogManager.getLogger(getClass());
 
+    @BeforeSuite(alwaysRun = true)
+    public void cleanUpExistingNotes() {
+        try {
+            log.info("Suite setup: Cleaning up all existing notes for the test user...");
+            String token = com.notesapp.api.AuthApi.loginDefault();
+            com.notesapp.api.NotesApi.deleteAllNotes(token);
+            log.info("Suite setup: Note cleanup finished successfully.");
+        } catch (Exception e) {
+            log.error("Suite setup: Note cleanup failed: {}", e.getMessage(), e);
+        }
+    }
+
     @BeforeMethod(alwaysRun = true)
     @Parameters({"browser", "headless"})
     public void setUp(@Optional("chrome") String browser, @Optional("false") String headless) {
-        log.info("====== Setting up driver: browser={}, headless={} ======", browser, headless);
-        DriverManager.setDriver(browser, Boolean.parseBoolean(headless));
+        // Priority order: CLI parameters (like -Dheadless=true from Jenkins) take absolute precedence
+        // over the XML parameters.
+        String targetBrowser = System.getProperty("browser", browser);
+        String headlessProp = System.getProperty("headless");
+        boolean targetHeadless = (headlessProp != null)
+                ? Boolean.parseBoolean(headlessProp)
+                : Boolean.parseBoolean(headless);
+
+        log.info("====== Setting up driver: browser={}, headless={} ======", targetBrowser, targetHeadless);
+        DriverManager.setDriver(targetBrowser, targetHeadless);
         WebDriver driver = DriverManager.getDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(ConfigReader.getImplicitWait()));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(ConfigReader.getPageLoadTimeout()));

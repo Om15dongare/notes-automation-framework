@@ -8,7 +8,7 @@
 
     <test name="UI Tests">
         <parameter name="browser" value="chrome"/>
-        <parameter name="headless" value="true"/>
+        <parameter name="headless" value="false"/>
         <classes>
             <class name="com.notesapp.tests.ui.LoginTest"/>
             <class name="com.notesapp.tests.ui.NotesCrudTest"/>
@@ -28,7 +28,7 @@
          causes Chrome 148 renderer timeout on navigate()/refresh() calls -->
     <test name="E2E Hybrid Tests" parallel="false">
         <parameter name="browser" value="chrome"/>
-        <parameter name="headless" value="true"/>
+        <parameter name="headless" value="false"/>
         <classes>
             <class name="com.notesapp.tests.e2e.UiApiSyncTest"/>
             <class name="com.notesapp.tests.e2e.DeleteSyncTest"/>

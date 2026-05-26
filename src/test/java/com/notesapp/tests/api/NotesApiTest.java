@@ -19,6 +19,7 @@ public class NotesApiTest {
     @BeforeClass
     public void getToken() {
         token = AuthApi.loginDefault();
+        NotesApi.deleteAllNotes(token);
     }
 
     @Test(description = "TC-API-01: GET /notes returns 200 with valid schema and <2s response time")

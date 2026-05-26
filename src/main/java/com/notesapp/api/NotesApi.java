@@ -99,4 +99,28 @@ public class NotesApi {
                 .stream()
                 .anyMatch(t -> title.equals(t));
     }
+
+    /**
+     * Deletes all notes for the authenticated user.
+     */
+    @Step("API: Delete all notes")
+    public static void deleteAllNotes(String token) {
+        log.info("Cleaning up all notes via API...");
+        Response response = getAllNotes(token);
+        if (response.getStatusCode() == 200) {
+            java.util.List<String> ids = response.jsonPath().getList("data.id");
+            if (ids != null && !ids.isEmpty()) {
+                log.info("Found {} notes to delete.", ids.size());
+                for (String id : ids) {
+                    deleteNote(token, id).then().statusCode(200);
+                }
+                log.info("Successfully deleted all {} notes.", ids.size());
+            } else {
+                log.info("No notes found to delete.");
+            }
+        } else {
+            log.error("Failed to fetch notes for deletion. Status: {}", response.getStatusCode());
+        }
+    }
 }
+
